@@ -1,6 +1,8 @@
 .hero {
-	.container-fluid {
-		padding: 0;
+	position: relative;
+	padding-bottom: 30px;
+	.hero-pagination {
+		bottom: 0;
 	}
 	&-slider {
 		color: #fff;
@@ -10,18 +12,50 @@
 			padding-right: var(--bs-gutter-x);
 			padding-left: var(--bs-gutter-x);
 			min-height: rem(470);
-		}
-		.image {
-			max-width: 230px;
 			height: auto;
-		}
-		.title {
-			font-weight: 500;
-			color: inherit;
-			b {
-				font-weight: 600;
+			.container {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				height: 100%;
+				& > * {
+					flex-shrink: 0;
+				}
+			}
+			&.swiper-slide-active {
+				.title,
+				.text,
+				.button {
+					animation-name: heroFadeLeft;
+					animation-duration: 0.5s;
+					animation-timing-function: ease;
+					animation-fill-mode: both;
+				}
+				.image {
+					animation-name: heroFadeRight;
+					animation-duration: 0.5s;
+					animation-timing-function: ease;
+					animation-fill-mode: both;
+				}
+				.button {
+					animation-name: heroFadeUp;
+				}
+
+				.image {
+					animation-delay: 0s;
+				}
+				.title {
+					animation-delay: 0.1s;
+				}
+				.text {
+					animation-delay: 0.2s;
+				}
+				.button {
+					animation-delay: 0.3s;
+				}
 			}
 		}
+
 		.img-cover {
 			position: absolute;
 			top: 0;
@@ -33,5 +67,72 @@
 				max-width: 100%;
 			}
 		}
+
+		.image {
+			max-width: rem(230);
+			height: auto;
+			transition: 0.25s ease;
+			margin-bottom: auto;
+		}
+		.title {
+			font-weight: 500;
+			color: inherit;
+			margin-top: rem(40);
+			margin-bottom: rem(20);
+			font-size: 2rem;
+			max-width: 23ch;
+			line-height: 1.2;
+			b {
+				font-weight: 600;
+			}
+		}
+
+		.text {
+			max-width: 25ch;
+			margin-bottom: rem(40);
+		}
+		.button {
+			// align-self: flex-start;
+			align-self: stretch;
+		}
+		.title,
+		.text,
+		.button,
+		.image {
+			opacity: 0;
+		}
+	}
+}
+
+@keyframes heroFadeLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(30%);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes heroFadeRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-30%);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes heroFadeUp {
+	0% {
+		opacity: 0;
+		transform: translateY(30%);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
 	}
 }

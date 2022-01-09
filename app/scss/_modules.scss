@@ -99,3 +99,24 @@ input.wpcf7-not-valid {
 		fill: #fff;
 	}
 }
+
+.swiper-pagination-bullet {
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		top: -3px;
+		left: -3px;
+		border: var(--border-cyan);
+		border-radius: 50%;
+		transform: scale(0.5);
+		transition: transform 0.25s ease;
+	}
+	&.swiper-pagination-bullet-active {
+		&:after {
+			transform: scale(1);
+		}
+	}
+}

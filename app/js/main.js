@@ -15,7 +15,7 @@ $(document).ready(function () {
 	});
 
 
-	$(".menu-toggle").click(function() {
+	$(".menu-toggle").click(function () {
 		if ($("body").hasClass("menu--active")) {
 			$("body").removeClass("menu--active");
 		} else {
@@ -25,7 +25,20 @@ $(document).ready(function () {
 
 	const heroSlider = new Swiper('.hero-slider', {
 		speed: 400,
-		effect: "coverflow",
+		effect: "fade",
+		loop: true,
+		autoplay: {
+			delay: 5000,
+		},
+		on: {
+			slideChange: function () {
+				lazyLoadInstance.update();
+			},
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
 	});
 
 	/* Animate On Scroll */

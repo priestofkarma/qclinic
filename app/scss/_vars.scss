@@ -3,6 +3,11 @@
 	--gap: 10px;
 	--wrapper: 1200px;
 	--header-height: 50px;
+	--swiper-pagination-bullet-horizontal-gap: 5px;
+	--swiper-pagination-bullet-size: 10px;
+	--swiper-pagination-bullet-inactive-color: #58c1d6;
+	--swiper-pagination-bullet-inactive-opacity: 35%;
+	--swiper-theme-color: #58c1d6;
 
 	/* colors */
 	--cyan: #58c1d6;
@@ -30,7 +35,7 @@
 	--h1-font: 600 3.75rem/1.2 "Gilroy", sans-serif;
 	--h1mob-font: 600 2rem/1.2 "Gilroy", sans-serif;
 	--h2-font: 600 2.5625rem/1.2 "Gilroy", sans-serif;
-	--h3-font: 600 1.375rem/normal "Gilroy", sans-serif;
+	--h3-font: 600 1.375rem / normal "Gilroy", sans-serif;
 	--h3mob-font: 600 1.125rem/1.22 "Gilroy", sans-serif;
 	--text01: 600 1rem/1.3 "Gilroy", sans-serif;
 	// --text1: 600 0.875rem/1.3 "Gilroy", sans-serif;
