@@ -1,0 +1,246 @@
+.header {
+	position: fixed;
+	width: 100%;
+	z-index: 9050;
+	max-width: 2560px;
+	top: 0;
+	&__inner {
+		height: var(--header-height);
+	}
+	&__logo {
+		display: inline-block;
+		width: rem(100);
+		height: auto;
+		svg {
+			width: 100%;
+			display: block;
+		}
+	}
+	&__nav {
+		ul {
+			list-style-type: none;
+			display: flex;
+			align-items: center;
+			margin: 0;
+			color: var(--heading);
+			li {
+				margin: 0;
+				&:not(:last-child) {
+					margin-right: rem(30);
+				}
+			}
+			a {
+				font-size: rem(14);
+				line-height: 1.21;
+				letter-spacing: 0.07em;
+				text-transform: uppercase;
+				font-weight: 600;
+			}
+		}
+	}
+
+	&__lang {
+		padding: 0;
+		position: relative;
+		width: auto;
+		background-color: #fff;
+		margin-right: rem(35);
+		ul {
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			margin: 0;
+			text-transform: uppercase;
+			font-weight: 600;
+			color: var(--cyan);
+		}
+		li {
+			margin: 0;
+			&:hover {
+				background-color: var(--lightblue);
+			}
+		}
+		a {
+			width: 50px;
+			display: inline-block;
+			padding: 5px 10px 5px 7px;
+			font: var(--button-font);
+			letter-spacing: 0.045em;
+		}
+		&:hover {
+			.header-lang__wrap {
+				&:after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+			.header-lang__all {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	&-lang__wrap {
+		position: relative;
+		z-index: 1;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 300%;
+			top: 0;
+			left: 0;
+			background-color: #fff;
+			box-shadow: var(--box-shadow-sm);
+			z-index: -1;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+		}
+		.current-lang a {
+			pointer-events: none;
+			position: relative;
+			&:after {
+				content: url("../images/chevron-down.svg");
+				position: absolute;
+				right: 11px;
+				bottom: 6px;
+			}
+		}
+		.lang-item:not(.current-lang) {
+			display: none;
+		}
+	}
+	&-lang__all {
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+		top: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+		z-index: 1;
+	}
+
+	&__action {
+		width: auto;
+		min-width: rem(148);
+		padding: 0 1.7rem;
+	}
+}
+
+.menu-toggle {
+	width: rem(48);
+	height: rem(48);
+	padding: 0;
+	border-radius: 50%;
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	background-color: #ffffff;
+	border-color: transparent;
+	margin: 0;
+	position: relative;
+	margin-right: -10px;
+	&:hover,
+	&:focus-visible {
+		box-shadow: var(--box-shadow-sm);
+	}
+	&.menu-toggle--close {
+		.menu-toggle-icon span {
+			background-color: transparent;
+			&:before {
+				top: 0;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+			&:after {
+				top: 0;
+				-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+.menu-toggle-icon {
+	position: relative;
+	span,
+	span:before,
+	span:after {
+		content: "";
+		display: block;
+		height: 2px;
+		position: relative;
+		transition: all 0.12s;
+		width: 25px;
+		background: var(--cyan);
+	}
+	span:before {
+		position: absolute;
+		top: -6px;
+	}
+	span:after {
+		position: absolute;
+		bottom: -6px;
+	}
+}
+
+/* mobile-nav */
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	min-width: rem(264);
+	// width: rem(264);
+	// max-width: calc(100% - 56px);
+	height: calc(100vh - 10px);
+	background-color: #fff;
+	box-shadow: var(--box-shadow-md);
+	transform: translateX(100%);
+	transition: transform 0.3s ease-in-out;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100vw;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #fff;
+		z-index: -1;
+	}
+	&__container {
+		padding: rem(28) rem(18) rem(20) rem(30);
+		height: 100%;
+		overflow-x: auto;
+	}
+	&__head {
+		max-width: rem(260);
+		margin-bottom: rem(25);
+		width: 100%;
+		.menu-toggle {
+			margin-top: -13px;
+		}
+	}
+	.header__nav {
+		ul {
+			flex-direction: column;
+			align-items: flex-start;
+			li {
+				&:not(:last-child) {
+					margin-right: 0;
+					margin-bottom: rem(30);
+				}
+			}
+		}
+	}
+	.header__action {
+		max-width: rem(260);
+		align-self: stretch;
+		flex-shrink: 0;
+	}
+}
+
+.menu--active .mobile-nav {
+	transform: none;
+}
+
+

@@ -1,0 +1,43 @@
+.footer {
+	padding-top: rem(70);
+	padding-bottom: rem(56);
+	ul {
+		margin: 0;
+		list-style-type: none;
+		a {
+			font: var(--link);
+			color: #08080d;
+		}
+		li {
+		}
+	}
+	a {
+		transition: opacity 0.15s ease-in-out, color 0.15s ease-in-out;
+		&:hover {
+			color: var(--cyan);
+		}
+	}
+	&__menu {
+		margin-top: rem(38);
+		ul li:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__social {
+		a {
+			transition: opacity 0.15s ease-in-out, color 0.15s ease-in-out;
+			&:hover {
+				opacity: 0.7;
+				color: var(--cyan);
+			}
+		}
+		li {
+			margin-bottom: 0;
+		}
+		svg {
+			width: 25px;
+			height: 25px;
+			fill: var(--cyan);
+		}
+	}
+}

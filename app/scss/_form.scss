@@ -1,0 +1,133 @@
+// Form
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 1 */
+    line-height: 1.15; /* 1 */
+    margin: 0; /* 2 */
+}
+
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+button {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+button:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+input,
+textarea,
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 0.1rem solid var(--primary);
+    border-radius: 0.4rem;
+    width: 100%;
+    &:focus {
+        outline: 0;
+    }
+}
+
+select {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23000000" d="M0,0l6,8l6-8"/></svg>')
+        center right no-repeat;
+    padding-right: 3rem;
+    &:focus {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23ffffff" d="M0,0l6,8l6-8"/></svg>');
+    }
+    &[multiple] {
+        background: none;
+        height: auto;
+    }
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+textarea {
+    min-height: 6.5em;
+    resize: none;
+    outline: none;
+}
+
+label,
+legend {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+fieldset {
+    border-width: 0;
+    padding: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+
+input, textarea {
+	border-bottom: var(--border-grey);
+	border-radius: 0;
+	font: var(--text02);
+	letter-spacing: 0.02em;
+	padding: 0 rem(12);
+	&::placeholder {
+		letter-spacing: 0.02em;
+		color: var(--text02-color);
+		opacity: 1 !important;
+	}
+	&:focus {
+		&::placeholder {
+			opacity: 0 !important;
+		}
+	}
+}
+
+input {
+	height: rem(40);
+}
+
+textarea {
+	padding: rem(12);
+}

@@ -1,0 +1,54 @@
+@import "_mixins/functions";
+// @import "vars";
+
+@media (min-width: 768px) {
+	:root {
+		--header-height: 75px;
+	}
+
+	.header {
+		&__logo {
+			width: rem(148);
+		}
+	}
+	.mobile-nav {
+		right: calc((100% - 720px) / 2);
+		transform: translateX(45vw);
+		&__head .menu-toggle {
+			margin-top: -7px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.footer__menu > .row {
+		height: 100%;
+	}
+	.mobile-nav {
+		// width: rem(370);
+		right: calc((100% - 960px) / 2);
+		transform: translateX(45vw);
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--header-height: 100px;
+	}
+	.header {
+		&__logo {
+			width: rem(156);
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.container,
+	.container-lg,
+	.container-md,
+	.container-sm,
+	.container-xl,
+	.container-xxl {
+		max-width: calc(1200px + var(--bs-gutter-x) * 2);
+	}
+}

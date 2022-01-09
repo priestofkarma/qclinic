@@ -1,0 +1,84 @@
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+	--bs-gutter-x: 0.625rem;
+}
+.row,
+.row > * {
+	--bs-gutter-x: 1.25rem;
+}
+
+::placeholder {
+	color: #666;
+}
+input,
+textarea {
+	outline: none;
+}
+input:focus:required:invalid,
+textarea:focus:required:invalid {
+	border-color: red;
+}
+input:required:valid,
+textarea:required:valid {
+	border-color: green;
+}
+html,
+body {
+	text-size-adjust: 100%;
+	-o-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	width: 100%;
+	max-width: 100%;
+	min-width: 320px;
+	font-size: rem(14);
+	font-family: var(--userfont);
+	font-size: var(--regular-text);
+	line-height: var(--lineheight);
+	color: var(--text01-color);
+	position: relative;
+	overflow-x: hidden;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	letter-spacing: 0.02em;
+}
+
+html {
+	height: 100%;
+}
+
+.footer {
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+/* USER STYLES */
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+:focus:not(input):not(textarea):not(select),
+:focus:not(input):not(textarea):not(select) {
+	outline: none;
+}
+
+::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
