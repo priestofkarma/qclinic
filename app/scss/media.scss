@@ -49,6 +49,22 @@
 			padding-bottom: rem(15);
 		}
 	}
+
+	.benefits {
+		padding-top: rem(60);
+		&-slider {
+			.swiper-wrapper {
+				flex-wrap: wrap;
+			}
+			.swiper-wrapper,
+			.swiper-wrapper > * {
+				--bs-gutter-x: 1.25rem;
+			}
+		}
+		&-pagination {
+			display: none;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -82,6 +98,22 @@
 			}
 		}
 	}
+
+	/* benefits */
+	.benefits {
+		&-slider {
+			.swiper-wrapper,
+			.swiper-wrapper > * {
+				--bs-gutter-x: 1.875rem;
+			}
+		}
+		&__item {
+			.text {
+				margin-top: rem(52);
+				margin-bottom: 0;
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -103,6 +135,17 @@
 		}
 		.hero-pagination {
 			padding-bottom: rem(40);
+		}
+	}
+	/* benefits */
+	.benefits {
+		padding-top: rem(100);
+		padding-top: rem(60);
+
+		&__item {
+			.title {
+				font: var(--h3-font);
+			}
 		}
 	}
 }

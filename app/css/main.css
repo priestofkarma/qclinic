@@ -584,17 +584,6 @@ img {
   position: relative;
   text-align: center; }
 
-/* if image broken */
-img:before {
-  content: "Oops, the image is broken :(";
-  display: block;
-  margin-bottom: 10px; }
-
-img::after {
-  content: "(url: " attr(src) ")";
-  display: block;
-  font-size: 12px; }
-
 button,
 dd,
 dt,
@@ -1007,6 +996,55 @@ ul {
     opacity: 1;
     -webkit-transform: none;
             transform: none; } }
+
+.benefits {
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem; }
+  .benefits-slider {
+    overflow: visible; }
+    .benefits-slider .swiper-slide {
+      margin-bottom: var(--bs-gutter-x);
+      height: auto;
+      min-height: 15.125rem; }
+    .benefits-slider .swiper-wrapper {
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap; }
+    .benefits-slider .swiper-wrapper,
+    .benefits-slider .swiper-wrapper > * {
+      --bs-gutter-x: 0.625rem; }
+  .benefits__item {
+    background-color: var(--lightblue);
+    padding: 2.5rem 1.875rem 3.125rem;
+    height: 100%;
+    -webkit-transition: -webkit-box-shadow 0.15s ease-in-out;
+    transition: -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: box-shadow 0.15s ease-in-out;
+    transition: box-shadow 0.15s ease-in-out;
+    transition: box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+    .benefits__item:hover {
+      -webkit-box-shadow: var(--box-shadow-sm);
+              box-shadow: var(--box-shadow-sm); }
+      .benefits__item:hover .image {
+        -webkit-transform: rotate(-10deg) scale(1.04);
+            -ms-transform: rotate(-10deg) scale(1.04);
+                transform: rotate(-10deg) scale(1.04); }
+    .benefits__item .title {
+      font: var(--h3mob-font);
+      margin: 0;
+      margin-right: 0.625rem; }
+    .benefits__item .image {
+      height: 2.5rem;
+      width: auto;
+      -webkit-transition: -webkit-transform 0.15s ease-in-out;
+      transition: -webkit-transform 0.15s ease-in-out;
+      -o-transition: transform 0.15s ease-in-out;
+      transition: transform 0.15s ease-in-out;
+      transition: transform 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out; }
+    .benefits__item .text {
+      margin-top: 3.25rem;
+      margin-bottom: 0; }
+  .benefits-pagination {
+    position: static; }
 
 /* footer */
 .footer {

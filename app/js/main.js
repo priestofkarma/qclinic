@@ -36,10 +36,75 @@ $(document).ready(function () {
 			},
 		},
 		pagination: {
-			el: '.swiper-pagination',
+			el: '.hero-pagination',
 			clickable: true,
 		},
 	});
+
+
+	/* 
+		let benefitsSlider = Swiper;
+		let init = false;
+	
+		function initBenefitsSlider() {
+			let mobile = window.matchMedia('(min-width: 0px) and (max-width: 575px)');
+	
+			if (mobile.matches) {
+				if (!init) {
+					init = true;
+					benefitsSlider = new Swiper('.benefits-slider', {
+						speed: 400,
+						effect: "slide",
+						// loop: true,
+						pagination: {
+							el: '.benefits-pagination',
+							clickable: true,
+						},
+						
+					});
+				}
+	
+			}
+		}
+	
+		initBenefitsSlider();
+	
+		$(window).on("resize", function () {
+			initBenefitsSlider();
+		}); */
+
+
+	const breakpoint = window.matchMedia('(min-width: 768px)');
+	let benefitsSlider;
+	const breakpointChecker = function () {
+		if (breakpoint.matches === true) {
+			if (benefitsSlider !== undefined) benefitsSlider.destroy(true, true);
+			return;
+		} else if (breakpoint.matches === false) {
+			return enableSwiper();
+		}
+
+	};
+
+	const enableSwiper = function () {
+
+		benefitsSlider = new Swiper('.benefits-slider', {
+			speed: 400,
+			pagination: {
+				el: '.benefits-pagination',
+				clickable: true,
+			},
+
+		});
+
+	};
+
+	// breakpoint.addListener(breakpointChecker);
+	breakpoint.addEventListener("change", breakpointChecker);
+	breakpointChecker();
+
+
+
 
 	/* Animate On Scroll */
 	/* const aos = document.querySelector('[data-aos]');

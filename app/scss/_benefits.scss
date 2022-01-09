@@ -1,0 +1,49 @@
+.benefits {
+	padding-top: rem(70);
+	padding-bottom: rem(70);
+	&-slider {
+		overflow: visible;
+		.swiper-slide {
+			margin-bottom: var(--bs-gutter-x);
+			height: auto;
+			min-height: rem(242);
+		}
+		.swiper-wrapper {
+			flex-wrap: nowrap;
+		}
+		.swiper-wrapper,
+		.swiper-wrapper > * {
+			--bs-gutter-x: 0.625rem;
+		}
+	}
+	&__item {
+		background-color: var(--lightblue);
+		padding: rem(40) rem(30) rem(50);
+		height: 100%;
+		transition: box-shadow 0.15s ease-in-out;
+
+		&:hover {
+			box-shadow: var(--box-shadow-sm);
+			.image {
+				transform: rotate(-10deg) scale(1.04);
+			}
+		}
+		.title {
+			font: var(--h3mob-font);
+			margin: 0;
+			margin-right: rem(10);
+		}
+		.image {
+			height: rem(40);
+			width: auto;
+			transition: transform 0.15s ease-in-out;
+		}
+		.text {
+			margin-top: rem(52);
+			margin-bottom: 0;
+		}
+	}
+	&-pagination {
+		position: static;
+	}
+}
