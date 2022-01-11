@@ -1,0 +1,49 @@
+.reviews {
+	padding-top: rem(50);
+	&-item {
+		background-color: var(--grey);
+		padding: rem(40) rem(17) rem(40) rem(25);
+	}
+	&-item__text {
+		display: flex;
+		flex-direction: column;
+		svg {
+			fill: var(--cyan);
+		}
+		.text {
+			margin-top: rem(20);
+			margin-bottom: rem(24);
+			font: var(--text02);
+			letter-spacing: 0.02em;
+		}
+	}
+	&-item__user {
+		.userpic {
+			width: rem(60);
+			border-radius: 50%;
+			height: rem(60);
+			overflow: hidden;
+			margin-right: rem(25);
+		}
+		.rating {
+			svg {
+				fill: var(--yellow);
+			}
+			svg:not(:last-child) {
+				margin-right: 5px;
+			}
+		}
+		.name {
+			margin: 0;
+			font: 600 1rem/1.3 "Gilroy", sans-serif;
+			letter-spacing: 0.02em;
+			color: var(--blue);
+			margin: 10px 0 3px;
+		}
+		.date {
+			font: var(--disdcriptor);
+			letter-spacing: 0.02em;
+			color: var(--text02-color);
+		}
+	}
+}

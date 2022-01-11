@@ -6,107 +6,118 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 1 */
-    line-height: 1.15; /* 1 */
-    margin: 0; /* 2 */
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 1 */
+	line-height: 1.15; /* 1 */
+	margin: 0; /* 2 */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
+	font-family: "Gilroy", sans-serif !important;
 }
 
 button,
 input {
-    /* 1 */
-    overflow: visible;
+	/* 1 */
+	overflow: visible;
 }
 
 button,
 select {
-    /* 1 */
-    text-transform: none;
+	/* 1 */
+	text-transform: none;
 }
 
 button {
-    -webkit-appearance: button;
+	-webkit-appearance: button;
 }
 
 button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
+	padding: 0;
+	border: 0;
 }
 
 button:-moz-focusring {
-    outline: 1px dotted ButtonText;
+	outline: 1px dotted ButtonText;
 }
 
 fieldset {
-    padding: 0.35em 0.75em 0.625em;
+	padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
-    box-sizing: border-box;
-    color: inherit;
-    display: table;
-    max-width: 100%;
-    padding: 0;
-    white-space: normal;
+	box-sizing: border-box;
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal;
 }
 
 input,
 textarea,
 select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    border: 0.1rem solid var(--primary);
-    border-radius: 0.4rem;
-    width: 100%;
-    &:focus {
-        outline: 0;
-    }
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	border: 0.1rem solid var(--primary);
+	border-radius: 0.4rem;
+	width: 100%;
+	&:focus {
+		outline: 0;
+	}
 }
 
 select {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23000000" d="M0,0l6,8l6-8"/></svg>')
-        center right no-repeat;
-    padding-right: 3rem;
-    &:focus {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23ffffff" d="M0,0l6,8l6-8"/></svg>');
-    }
-    &[multiple] {
-        background: none;
-        height: auto;
-    }
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23000000" d="M0,0l6,8l6-8"/></svg>')
+		center right no-repeat;
+	padding-right: 3rem;
+	&:focus {
+		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23ffffff" d="M0,0l6,8l6-8"/></svg>');
+	}
+	&[multiple] {
+		background: none;
+		height: auto;
+	}
 }
 
 input::-ms-clear {
-    display: none;
+	display: none;
 }
 
 textarea {
-    min-height: 6.5em;
-    resize: none;
-    outline: none;
+	// min-height: 6.5em;
+	resize: none;
+	outline: none;
 }
 
 label,
 legend {
-    display: block;
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+	display: block;
+	// font-size: 1.6rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
 }
 
 fieldset {
-    border-width: 0;
-    padding: 0;
+	border-width: 0;
+	padding: 0;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    display: inline;
+	display: inline;
 }
 
-input, textarea {
+input,
+textarea,
+select,
+.jqselect {
 	border-bottom: var(--border-grey);
 	border-radius: 0;
 	font: var(--text02);
@@ -124,10 +135,105 @@ input, textarea {
 	}
 }
 
-input {
+input,
+select,
+.jqselect {
 	height: rem(40);
 }
 
 textarea {
 	padding: rem(12);
+}
+
+.jq-selectbox {
+	width: 100%;
+	margin-bottom: 1rem;
+	&__dropdown {
+		width: 100% !important;
+		background: #fff;
+		box-shadow: var(--box-shadow-md);
+		left: 0;
+		ul {
+			margin: 0;
+		}
+	}
+	&__select {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	li {
+		padding: rem(8) rem(12);
+		margin: 0;
+		cursor: pointer;
+		&:hover {
+			background-color: var(--grey);
+		}
+	}
+}
+
+.jq-selectbox__select-text:after {
+	content: url("../images/chevron-down-black.svg");
+	position: relative;
+	margin-left: 2px;
+	// right: 11px;
+	// bottom: 6px;
+}
+
+.wpcf7-acceptance {
+	label {
+		display: flex;
+		font-weight: 400;
+	}
+	a {
+		color: var(--cyan);
+		font-weight: inherit;
+	}
+}
+.wpcf7-list-item-label {
+	cursor: pointer;
+}
+.jq-checkbox {
+	cursor: pointer;
+
+	&__div {
+		position: relative;
+		width: rem(15);
+		height: rem(15);
+		border: var(--border-cyan);
+		margin-top: 2px;
+		margin-right: rem(10);
+		&:after {
+			content: "";
+			position: absolute;
+			display: block;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url("../images/check.svg");
+			background-position: top right;
+			background-repeat: no-repeat;
+			background-size: 12px;
+			opacity: 0;
+		}
+	}
+
+	&.checked {
+		.jq-checkbox__div {
+			&:after {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.register-form {
+	form {
+		button[type="submit"] {
+			width: 100%;
+			margin-top: rem(40);
+		}
+	}
 }

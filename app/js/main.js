@@ -10,15 +10,34 @@ $(document).ready(function () {
 	addTouchClass();
 
 	/* LazyLoad */
-	let lazyLoadInstance = new LazyLoad({
+	/* let lazyLoadInstance = new LazyLoad({
 		elements_selector: ".lazy",
+	}); */
+
+	$(window).on("scroll", function () {
+		setPageScroll();
 	});
+
+	function setPageScroll() {
+		let scrollPx = window.scrollY;
+
+		if (scrollPx > 50) {
+			$("body").addClass("page-scrolled");
+		} else {
+			$("body").removeClass("page-scrolled");
+		}
+	}
+
+	setPageScroll();
+
 
 
 	$(".menu-toggle").click(function () {
 		if ($("body").hasClass("menu--active")) {
+			$("body").css("overflow-y", "")
 			$("body").removeClass("menu--active");
 		} else {
+			$("body").css("overflow-y", "hidden")
 			$("body").addClass("menu--active");
 		}
 	})
@@ -32,7 +51,7 @@ $(document).ready(function () {
 		},
 		on: {
 			slideChange: function () {
-				lazyLoadInstance.update();
+				// lazyLoadInstance.update();
 			},
 		},
 		pagination: {
@@ -42,67 +61,162 @@ $(document).ready(function () {
 	});
 
 
-	/* 
-		let benefitsSlider = Swiper;
-		let init = false;
-	
-		function initBenefitsSlider() {
-			let mobile = window.matchMedia('(min-width: 0px) and (max-width: 575px)');
-	
-			if (mobile.matches) {
-				if (!init) {
-					init = true;
-					benefitsSlider = new Swiper('.benefits-slider', {
-						speed: 400,
-						effect: "slide",
-						// loop: true,
-						pagination: {
-							el: '.benefits-pagination',
-							clickable: true,
-						},
-						
-					});
+
+	/* benefits slider */
+	let benefitsSlider = false;
+	let benefitsSliderInit = false;
+
+	/* our team slider */
+	let ourTeamSlider = false;
+	let ourTeamSliderInit = false;
+
+	/* which media query */
+	function swiperMode() {
+		let queryXS = window.matchMedia('(min-width: 0px)');
+		let queryS = window.matchMedia('(min-width: 576px)');
+		let queryMD = window.matchMedia('(min-width: 768px)');
+		let queryLG = window.matchMedia('(min-width: 992px)');
+		let queryXL = window.matchMedia('(min-width: 1200px)');
+		let queryXXL = window.matchMedia('(min-width: 1400px)');
+
+		if (queryXS.matches) {
+			if (!benefitsSliderInit) {
+				benefitsSliderInit = true;
+				benefitsSlider = new Swiper('.benefits-slider', {
+					speed: 400,
+					pagination: {
+						el: '.benefits-pagination',
+						clickable: true,
+					},
+				});
+			}
+
+			/* our team slider */
+			ourTeamSliderInit = false;
+			if (ourTeamSlider) {
+				ourTeamSlider.destroy();
+			}
+
+		}
+
+		if (queryS.matches) {
+
+			ourTeamSlider = new Swiper('.our-team-slider', {
+				speed: 400,
+				effect: "slide",
+				slidesPerView: 2,
+				// slidesPerGroup: 2,
+				spaceBetween: 20,
+				navigation: {
+					nextEl: '.our-team-swiper-button.swiper-button-next',
+					prevEl: '.our-team-swiper-button.swiper-button-prev',
+				},
+				on: {
+					slideChange: function () {
+						// lazyLoadInstance.update();
+					},
+				},
+				breakpoints: {
+					1400: {
+						speed: 1000,
+						slidesPerView: 3,
+						slidesPerGroup: 3,
+						spaceBetween: 30
+					},
 				}
-	
+			});
+		}
+
+		if (queryMD.matches) {
+			/* benefits slider */
+			benefitsSliderInit = false;
+			if (benefitsSlider) {
+				benefitsSlider.destroy();
 			}
 		}
-	
-		initBenefitsSlider();
-	
-		$(window).on("resize", function () {
-			initBenefitsSlider();
-		}); */
 
-
-	const breakpoint = window.matchMedia('(min-width: 768px)');
-	let benefitsSlider;
-	const breakpointChecker = function () {
-		if (breakpoint.matches === true) {
-			if (benefitsSlider !== undefined) benefitsSlider.destroy(true, true);
-			return;
-		} else if (breakpoint.matches === false) {
-			return enableSwiper();
+		if (queryXL.matches) {
 		}
+	}
 
-	};
+	swiperMode();
 
-	const enableSwiper = function () {
+	window.addEventListener('resize', function () {
+		swiperMode();
+	});
 
-		benefitsSlider = new Swiper('.benefits-slider', {
-			speed: 400,
-			pagination: {
-				el: '.benefits-pagination',
-				clickable: true,
+	const servicesSlider = new Swiper('.services-slider', {
+		speed: 400,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		navigation: {
+			nextEl: '.services-swiper-button.swiper-button-next',
+			prevEl: '.services-swiper-button.swiper-button-prev',
+		},
+		on: {
+			slideChange: function () {
+				// lazyLoadInstance.update();
 			},
+		},
+		breakpoints: {
+			768: {
+				speed: 700,
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 20,
+			},
+			992: {
+				speed: 700,
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 30
 
-		});
+			},
+		}
+	});
 
-	};
+	const reviewsSlider = new Swiper('.reviews-slider', {
+		speed: 400,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		autoHeight: true,
+		navigation: {
+			nextEl: '.reviews-swiper-button.swiper-button-next',
+			prevEl: '.reviews-swiper-button.swiper-button-prev',
+		},
+		breakpoints: {
+			768: {
+				speed: 700,
+				slidesPerView: 2,
+				slidesPerGroup: 2,
+				spaceBetween: 20,
+			},
+			1200: {
+				speed: 700,
+				slidesPerView: 3,
+				slidesPerGroup: 3,
+				spaceBetween: 30
 
-	// breakpoint.addListener(breakpointChecker);
-	breakpoint.addEventListener("change", breakpointChecker);
-	breakpointChecker();
+			},
+		}
+	});
 
+	const ctaSlider = new Swiper('.cta-slider', {
+		speed: 600,
+		effect: "fade",
+		loop: true,
+		autoHeight: true,
+		autoplay: {
+			delay: 5000,
+		},
+		pagination: {
+			el: '.cta-pagination',
+			clickable: true,
+		},
+
+	});
+
+	$('select, input:checkbox').styler();
 
 
 
@@ -146,45 +260,5 @@ $(document).ready(function () {
 		$('html, body').animate({ scrollTop: 0 }, 500);
 	}); */
 
-	/* slick slider */
-	/* 	if ($('.slider').length) {
-			$('.slider').slick({
-				arrows: true,
-				infinite: false,
-				dots: true,
-				autoplay: true,
-				fade: false,
-				prevArrow: $('.arrows .btn-prev'),
-				nextArrow: $('.arrows .btn-next'),
-				responsive: [
-					{
-						breakpoint: 2560,
-						settings: "unslick",
-					},
-					{
-						breakpoint: 1200,
-						settings: {
-							infinite: false,
-							slidesToShow: 3,
-							slidesToScroll: 2,
-							draggable: true,
-	
-						}
-					},
-	
-					{
-						breakpoint: 768,
-						settings: {
-							slidesToShow: 2,
-							slidesToScroll: 2,
-							draggable: true,
-	
-						}
-					},
-	
-				]
-			});
-		}
-	 */
 });
 

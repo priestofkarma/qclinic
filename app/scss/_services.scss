@@ -1,0 +1,21 @@
+.services {
+	padding-bottom: rem(100);
+	&__item {
+		// .services-description {}
+		.img-cover {
+			margin-bottom: rem(25);
+			padding-bottom: 100%;
+			img {
+				animation: 0.7s ease 0s infinite alternate loading;
+				&.loaded {
+					animation: 0.7s ease 0s both show-img;
+				}
+			}
+		}
+		.title {
+			font: var(--h3mob-font);
+			margin-bottom: rem(19);
+		}
+		// .text {}
+	}
+}

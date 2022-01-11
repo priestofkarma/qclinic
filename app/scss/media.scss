@@ -22,7 +22,26 @@
 			}
 		}
 	}
+
+	.default-slider-head {
+		.title {
+			width: 60%;
+			margin-bottom: 0;
+		}
+	}
+
+	.show-more-btn {
+		max-width: max-content;
+	}
+
+	.our-team-list.swiper.our-team-slider {
+		overflow: hidden;
+		&__wrapper {
+			flex-wrap: nowrap;
+		}
+	}
 }
+
 @media (min-width: 768px) {
 	:root {
 		--header-height: 75px;
@@ -55,6 +74,7 @@
 		&-slider {
 			.swiper-wrapper {
 				flex-wrap: wrap;
+				width: auto;
 			}
 			.swiper-wrapper,
 			.swiper-wrapper > * {
@@ -63,6 +83,77 @@
 		}
 		&-pagination {
 			display: none;
+		}
+	}
+
+	.our-team {
+		padding-bottom: rem(70);
+	}
+	.reviews {
+		padding-top: rem(70);
+	}
+
+	.cta {
+		padding-top: rem(120);
+		margin-top: rem(80);
+		&-slider {
+			.cta-pagination {
+				bottom: rem(20);
+			}
+		}
+		&:after {
+			display: none;
+		}
+		&-circle {
+			top: rem(-95);
+			right: calc(50% - 50px);
+			fill: var(--cyan);
+			position: absolute;
+			z-index: 2;
+			width: rem(100);
+		}
+		&-item {
+			margin-bottom: rem(87);
+			.button {
+				width: auto;
+			}
+		}
+		&-item__left {
+			padding-top: rem(60);
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				height: 100%;
+				width: 100vw;
+				bottom: 0;
+				right: 18%;
+				z-index: -1;
+				// pointer-events: none;
+				background-color: var(--grey);
+			}
+		}
+		&-item__right {
+			margin-top: rem(-44);
+			.img-cover {
+				height: 100%;
+				img {
+					position: absolute;
+					bottom: 0;
+				}
+			}
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				height: 100%;
+				width: 50vw;
+				bottom: 0;
+				left: 0;
+				z-index: -1;
+				// pointer-events: none;
+				background-color: var(--lightblue);
+			}
 		}
 	}
 }
@@ -75,6 +166,13 @@
 		// width: rem(370);
 		right: calc((100% - 960px) / 2);
 		transform: translateX(calc(100% + (960px / 2)));
+	}
+
+	.default-slider-head {
+		margin-bottom: rem(67);
+		.title {
+			font: var(--h2-font);
+		}
 	}
 
 	/* hero */
@@ -114,6 +212,52 @@
 			}
 		}
 	}
+
+	/* services */
+	.services {
+		&__item {
+			.title {
+				font: var(--h3-font);
+			}
+		}
+	}
+
+	/* our-team */
+	.our-team {
+		padding-top: rem(90);
+
+		&__item {
+			margin-bottom: rem(30);
+			.title {
+				font: var(--h3-font);
+			}
+			.text {
+				margin-bottom: auto;
+			}
+			.img-cover {
+				overflow: hidden;
+				img {
+					transition: transform 0.15s ease-in-out, opacity transform 0.15s ease-in-out;
+				}
+			}
+			&:hover {
+				.our-team__item-description {
+					transform: none;
+				}
+				.img-cover {
+					img {
+						transform: translateY(5%);
+					}
+				}
+			}
+		}
+		&__item-description {
+			bottom: 0;
+			box-shadow: none;
+			padding-left: 0;
+			max-width: 50%;
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -145,6 +289,110 @@
 		&__item {
 			.title {
 				font: var(--h3-font);
+			}
+		}
+	}
+
+	/* services */
+	.services {
+		&-list {
+			.services__item-wrap {
+				.services__description {
+					width: 50%;
+					height: 50%;
+					padding: 30px;
+					padding-right: 0;
+					position: absolute;
+					top: 0;
+					left: 50%;
+					background-color: #fff;
+				}
+				&:nth-child(4n + 0),
+				&:nth-child(4n + 1) {
+					.services__description {
+						top: 50%;
+					}
+				}
+			}
+		}
+		&__item {
+			&:before,
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				background-color: #fff;
+				z-index: 1;
+				pointer-events: none;
+			}
+			&:before {
+				width: 100%;
+				height: 1px;
+				left: 0;
+				top: 50%;
+			}
+			&:after {
+				width: 1px;
+				height: 100%;
+				left: 50%;
+				top: 0;
+			}
+		}
+	}
+
+	.reviews {
+		padding-top: rem(50);
+		&-item {
+			background-color: var(--grey);
+			padding: rem(40) rem(17) rem(40) rem(25);
+		}
+		&-item__text {
+			flex-direction: row;
+			svg {
+				flex-shrink: 0;
+			}
+			.text {
+				margin-top: 0;
+				margin-left: rem(23);
+			}
+		}
+	}
+
+	.cta {
+		&-circle {
+			top: rem(-175);
+		}
+		&-slider {
+			.cta-pagination {
+				bottom: rem(34);
+			}
+		}
+
+		&-item {
+			margin-bottom: rem(106);
+			.title {
+				font: var(--h2-font);
+				margin-bottom: rem(30);
+			}
+			.text {
+				margin-bottom: rem(60);
+				max-width: 45ch;
+			}
+			&__left {
+				&:after {
+					right: 0;
+				}
+			}
+			&__right {
+				margin-top: rem(-120);
+				.img-cover {
+					img {
+						left: 50%;
+						transform: translateX(-50%);
+						// position: relative;
+						// bottom: 0;
+					}
+				}
 			}
 		}
 	}
