@@ -161,6 +161,14 @@ html {
   border: 0;
   padding: 0; }
 
+::-moz-selection {
+  background: var(--cyan);
+  color: #fff; }
+
+::selection {
+  background: var(--cyan);
+  color: #fff; }
+
 b,
 strong {
   font-weight: bold; }
@@ -440,6 +448,14 @@ input.wpcf7-not-valid {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
 
+.cta-circle {
+  animation: 30s rotate360 0s linear infinite reverse;
+  fill: var(--cyan);
+  position: absolute;
+  z-index: 2;
+  width: 6.25rem;
+  height: auto; }
+
 /* formstyler */
 .jq-checkbox,
 .jq-radio {
@@ -709,6 +725,13 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
+  font-family: "Gilroy", sans-serif !important; }
+
+.register input:-webkit-autofill,
+.register input:-webkit-autofill:hover,
+.register input:-webkit-autofill:focus,
+.register input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--grey) inset !important;
   font-family: "Gilroy", sans-serif !important; }
 
 button,
@@ -1599,7 +1622,8 @@ ul {
     display: none; } }
 
 .reviews {
-  padding-top: 3.125rem; }
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem; }
   .reviews-item {
     background-color: var(--grey);
     padding: 2.5rem 1.0625rem 2.5rem 1.5625rem; }
@@ -1638,6 +1662,32 @@ ul {
     font: var(--disdcriptor);
     letter-spacing: 0.02em;
     color: var(--text02-color); }
+
+.register {
+  margin-top: 6.25rem;
+  background-color: var(--grey); }
+  .register__left-wrapper {
+    position: relative; }
+    .register__left-wrapper .cta-circle {
+      top: -3.125rem;
+      right: calc(var(--bs-gutter-x) * 0.5); }
+  .register__left {
+    padding-top: 4.375rem;
+    position: relative;
+    z-index: 1; }
+    .register__left .title {
+      margin-bottom: 2.3125rem; }
+    .register__left form {
+      margin: 0; }
+  .register__right {
+    padding-top: 2.5rem;
+    position: relative;
+    z-index: 1;
+    padding-left: 1.25rem;
+    max-width: 18.125rem;
+    margin: 0 auto; }
+    .register__right .img-cover {
+      padding-bottom: 106%; }
 
 /* footer */
 .footer {

@@ -1,0 +1,35 @@
+.register {
+	margin-top: rem(100);
+	background-color: var(--grey);
+	&__left-wrapper {
+		position: relative;
+		.cta-circle {
+			top: rem(-50);
+			right: calc(var(--bs-gutter-x) * 0.5);
+		}
+	}
+	&__left {
+		padding-top: rem(70);
+		position: relative;
+		z-index: 1;
+
+		.title {
+			margin-bottom: rem(37);
+		}
+		form {
+			margin: 0;
+		}
+	}
+	&__right {
+		padding-top: rem(40);
+		position: relative;
+		z-index: 1;
+		padding-left: rem(20);
+		max-width: rem(290);
+		margin: 0 auto;
+
+		.img-cover {
+			padding-bottom: 106%;
+		}
+	}
+}

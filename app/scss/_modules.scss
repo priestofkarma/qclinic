@@ -210,7 +210,14 @@ input.wpcf7-not-valid {
 	}
 }
 
-
+.cta-circle {
+	animation: 30s rotate360 0s linear infinite reverse;
+	fill: var(--cyan);
+	position: absolute;
+	z-index: 2;
+	width: rem(100);
+	height: auto;
+}
 
 /* formstyler */
 .jq-checkbox,
@@ -325,4 +332,3 @@ input.wpcf7-not-valid {
 	margin: 0; /* в каких-то браузерах присутствует отступ */
 	-webkit-appearance: none;
 }
-

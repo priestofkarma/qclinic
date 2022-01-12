@@ -782,24 +782,27 @@
 			<section class="register">
 				<div class="container">
 					<div class="register-container row">
-						<div class="col-xl-7">
-							<div class="register__left">
-								<h3 class="title">Запишитесь на бесплатную онлайн-консультацию</h3>
+						<div class="col-lg-7 register__left-wrapper">
+							<svg class="cta-circle" width="100" height="100" viewBox="0 0 130 130">
+								<use href="images/sprite.svg#pochustvuy-kachestvo"></use>
+							</svg>
+							<div class="register__left col-lg-11">
+								<h3 class="title">Запишитесь на бесплатную <br> онлайн-консультацию</h3>
 								<div class="register-form">
 									<form action="gg.php">
 										<div class="row">
-											<div class="col-xl-6">
+											<div class="col-md-6">
 												<input type="text" name="name" placeholder="ФИО">
 											</div>
-											<div class="col-xl-6">
+											<div class="col-md-6">
 												<input type="tel" name="telephone" placeholder="Номер телефона">
 											</div>
 										</div>
 										<div class="row">
-											<div class="col-xl-6">
+											<div class="col-md-6">
 												<input type="email" name="email" placeholder="E-mail">
 											</div>
-											<div class="col-xl-6">
+											<div class="col-md-6">
 												<select name="usluga">
 													<option value="usluga">Услуга</option>
 													<option value="usluga">Логопедия</option>
@@ -835,7 +838,13 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-5"></div>
+						<div class="col-lg-5 register__right-wrapper">
+							<div class="register__right">
+								<div class="img-cover">
+									<img src="images/team/larisa.png" alt="Лариса - менеджер">
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -849,7 +858,7 @@
 						<p class="h3 contact-form__title">Подписывайтесь на нашу рассылку</p>
 						<form action="gg.php">
 							<div>
-								<input type="mail" placeholder="E-mail">
+								<input type="email" placeholder="E-mail">
 							</div>
 							<button class="button" type="submit">
 								<svg class="button__icon">

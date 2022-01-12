@@ -87,3 +87,10 @@ html {
 	border: 0;
 	padding: 0;
 }
+
+
+::selection {
+//   background: #58c1d6;
+  background: var(--cyan);
+  color: #fff;
+}
