@@ -1,0 +1,26 @@
+.intro {
+	padding-top: calc(var(--header-height) + 85px);
+	color: #fff;
+	margin-bottom: rem(125);
+	background-color: var(--cyan);
+	&__title {
+		font: var(--h1mob-font);
+		margin-bottom: rem(40);
+		color: inherit;
+		animation: 0.5s heroFadeLeft 0s ease both;
+	}
+	&__image {
+		margin-bottom: rem(-90);
+		padding-bottom: 115%;
+		min-height: rem(350);
+		height: calc(100% + 5.625rem);
+		animation: 0.5s heroFadeUp 0.2s ease both;
+	}
+	.breadcrumb-wrapper {
+		margin-bottom: rem(24);
+	}
+	.breadcrumb {
+		margin: 0;
+		animation: 0.5s heroFadeLeft 0.1s ease both;
+	}
+}

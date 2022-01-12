@@ -100,13 +100,32 @@ input.wpcf7-not-valid {
 	}
 }
 
-.page-scrolled .header {
-	box-shadow: var(--box-shadow-sm);
+.not-home {
+	.header {
+		&__logo {
+			svg {
+				fill: var(--cyan);
+			}
+		}
+	}
 }
 
-.not-home .header__logo {
-	svg {
-		fill: #fff;
+.page-scrolled {
+	&.not-home {
+		.header {
+			background-color: #fff;
+			&__nav {
+				color: var(--heading);
+			}
+			&__logo {
+				svg {
+					fill: var(--cyan);
+				}
+			}
+		}
+	}
+	.header {
+		box-shadow: var(--box-shadow-sm);
 	}
 }
 
@@ -331,4 +350,31 @@ input.wpcf7-not-valid {
 .jq-number__field input::-webkit-outer-spin-button {
 	margin: 0; /* в каких-то браузерах присутствует отступ */
 	-webkit-appearance: none;
+}
+
+.breadcrumb-wrapper {
+	.breadcrumb {
+		font: var(--text03);
+		letter-spacing: 0.04em;
+		display: flex;
+		list-style: none;
+		margin: 0 -4px;
+		li {
+			margin: 0 4px 1rem;
+			&:not(:last-child) {
+				flex-shrink: 0;
+			}
+		}
+		a {
+			font: inherit;
+			font-weight: 400;
+			letter-spacing: inherit;
+		}
+	}
+}
+
+.fancybox-button  {
+	&:hover {
+		color: var(--cyan);
+	}
 }

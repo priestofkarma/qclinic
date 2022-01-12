@@ -31,6 +31,28 @@ $(document).ready(function () {
 	setPageScroll();
 
 
+	/* gallery */
+	if ($('.gallery__wrapper').length > 0) {
+		$('.gallery__wrapper').isotope({
+			itemSelector: '.gallery__item',
+			percentPosition: true,
+			masonry: {
+				columnWidth: '.gallery__sizer',
+				gutter: $(".gallery__gutter").width() * 2,
+			},
+		});
+
+		function setSecondImageHeight() {
+			$('.gallery__wrapper .gallery__item:eq(1)').height($('.gallery__wrapper .gallery__item:eq(0)').height())
+		}
+
+		setSecondImageHeight();
+
+		$(window).resize(function () {
+			setSecondImageHeight();
+		});
+	}
+
 
 	$(".menu-toggle").click(function () {
 		if ($("body").hasClass("menu--active")) {
@@ -80,15 +102,17 @@ $(document).ready(function () {
 		let queryXXL = window.matchMedia('(min-width: 1400px)');
 
 		if (queryXS.matches) {
-			if (!benefitsSliderInit) {
-				benefitsSliderInit = true;
-				benefitsSlider = new Swiper('.benefits-slider', {
-					speed: 400,
-					pagination: {
-						el: '.benefits-pagination',
-						clickable: true,
-					},
-				});
+			if ($(".benefits-slider").length > 0) {
+				if (!benefitsSliderInit) {
+					benefitsSliderInit = true;
+					benefitsSlider = new Swiper('.benefits-slider', {
+						speed: 400,
+						pagination: {
+							el: '.benefits-pagination',
+							clickable: true,
+						},
+					});
+				}
 			}
 
 			/* our team slider */
@@ -100,31 +124,32 @@ $(document).ready(function () {
 		}
 
 		if (queryS.matches) {
-
-			ourTeamSlider = new Swiper('.our-team-slider', {
-				speed: 400,
-				effect: "slide",
-				slidesPerView: 2,
-				// slidesPerGroup: 2,
-				spaceBetween: 20,
-				navigation: {
-					nextEl: '.our-team-swiper-button.swiper-button-next',
-					prevEl: '.our-team-swiper-button.swiper-button-prev',
-				},
-				on: {
-					slideChange: function () {
-						// lazyLoadInstance.update();
+			if ($(".our-team-slider").length > 0) {
+				ourTeamSlider = new Swiper('.our-team-slider', {
+					speed: 400,
+					effect: "slide",
+					slidesPerView: 2,
+					// slidesPerGroup: 2,
+					spaceBetween: 20,
+					navigation: {
+						nextEl: '.our-team-swiper-button.swiper-button-next',
+						prevEl: '.our-team-swiper-button.swiper-button-prev',
 					},
-				},
-				breakpoints: {
-					1400: {
-						speed: 1000,
-						slidesPerView: 3,
-						slidesPerGroup: 3,
-						spaceBetween: 30
+					on: {
+						slideChange: function () {
+							// lazyLoadInstance.update();
+						},
 					},
-				}
-			});
+					breakpoints: {
+						1400: {
+							speed: 1000,
+							slidesPerView: 3,
+							slidesPerGroup: 3,
+							spaceBetween: 30
+						},
+					}
+				});
+			}
 		}
 
 		if (queryMD.matches) {
@@ -217,6 +242,24 @@ $(document).ready(function () {
 	});
 
 	$('select, input:checkbox').styler();
+
+	function zoom(e) {
+		let zoomer = e.currentTarget;
+		e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
+		e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
+		x = offsetX / zoomer.offsetWidth * 100
+		y = offsetY / zoomer.offsetHeight * 100
+		zoomer.style.backgroundPosition = x + '% ' + y + '%';
+	}
+
+	if (!$("html").hasClass("touch")) {
+		let galleryItems = document.querySelectorAll(".gallery__item .img-cover");
+		galleryItems.forEach(image => {
+			image.addEventListener("mousemove", function (e) {
+				zoom(e);
+			});
+		});
+	}
 
 
 
