@@ -33,15 +33,27 @@ $(document).ready(function () {
 
 	/* gallery */
 	if ($('.gallery__wrapper').length > 0) {
-		$('.gallery__wrapper').isotope({
-			itemSelector: '.gallery__item',
-			percentPosition: true,
-			masonry: {
-				columnWidth: '.gallery__sizer',
-				gutter: $(".gallery__gutter").width() * 2,
-			},
-		});
+		let $grid = $('.gallery__wrapper').imagesLoaded(function () {
+			/* $grid.isotope({
+				// options...
+				itemSelector: '.gallery__item',
+				percentPosition: true,
+				masonry: {
+					columnWidth: '.gallery__sizer',
+					gutter: $(".gallery__gutter").width() * 2,
+				},
+			}); */
+			$grid.isotope({
+				itemSelector: '.gallery__item',
+				percentPosition: true,
+				masonry: {
+					columnWidth: '.gallery__sizer',
+					gutter: $(".gallery__gutter").width() * 2,
+				},
+			});
 
+		});
+		
 		function setSecondImageHeight() {
 			$('.gallery__wrapper .gallery__item:eq(1)').height($('.gallery__wrapper .gallery__item:eq(0)').height())
 		}

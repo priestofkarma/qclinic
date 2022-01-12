@@ -8,6 +8,21 @@ const cleancss = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const del = require('del');
+const include = require('gulp-file-include');
+
+
+function html() {
+	return src("app/*.html")
+		.pipe(
+			include({
+				prefix: "@@",
+				basepath: "@file",
+			})
+		)
+		.pipe(dest("app/html"))
+		.pipe(browserSync.stream());
+};
+
 
 function browsersync() {
 	browserSync.init({
@@ -88,10 +103,10 @@ exports.stylesdev = stylesdev;
 exports.images = images;
 exports.cleanimg = cleanimg;
 exports.cleandist = cleandist;
-exports.build = series(cleandist, styles, scripts, images, buildcopy);
+exports.build = series(html, cleandist, styles, scripts, images, buildcopy);
 
 //  Для зразработки
-exports.default = parallel(stylesdev, browsersync, startwatch);
+exports.default = parallel(html, stylesdev, browsersync, startwatch);
 
 // Экспортируем дефолтный таск с нужным набором функций
 // exports.default = parallel(styles, scripts, browsersync, startwatch);

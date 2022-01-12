@@ -21,5 +21,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "gulp-file-include": "^2.3.0"
+  }
 }
