@@ -34,15 +34,6 @@ $(document).ready(function () {
 	/* gallery */
 	if ($('.gallery__wrapper').length > 0) {
 		let $grid = $('.gallery__wrapper').imagesLoaded(function () {
-			/* $grid.isotope({
-				// options...
-				itemSelector: '.gallery__item',
-				percentPosition: true,
-				masonry: {
-					columnWidth: '.gallery__sizer',
-					gutter: $(".gallery__gutter").width() * 2,
-				},
-			}); */
 			$grid.isotope({
 				itemSelector: '.gallery__item',
 				percentPosition: true,
@@ -53,7 +44,7 @@ $(document).ready(function () {
 			});
 
 		});
-		
+
 		function setSecondImageHeight() {
 			$('.gallery__wrapper .gallery__item:eq(1)').height($('.gallery__wrapper .gallery__item:eq(0)').height())
 		}
@@ -104,9 +95,10 @@ $(document).ready(function () {
 	let ourTeamSlider = false;
 	let ourTeamSliderInit = false;
 
+
 	/* which media query */
 	function swiperMode() {
-		let queryXS = window.matchMedia('(min-width: 0px)');
+		let queryXS = window.matchMedia('(min-width: 1px)');
 		let queryS = window.matchMedia('(min-width: 576px)');
 		let queryMD = window.matchMedia('(min-width: 768px)');
 		let queryLG = window.matchMedia('(min-width: 992px)');
@@ -127,32 +119,24 @@ $(document).ready(function () {
 				}
 			}
 
-			/* our team slider */
-			ourTeamSliderInit = false;
-			if (ourTeamSlider) {
-				ourTeamSlider.destroy();
-			}
-
-		}
-
-		if (queryS.matches) {
 			if ($(".our-team-slider").length > 0) {
 				ourTeamSlider = new Swiper('.our-team-slider', {
 					speed: 400,
 					effect: "slide",
-					slidesPerView: 2,
+					slidesPerView: 1,
 					// slidesPerGroup: 2,
-					spaceBetween: 20,
+					spaceBetween: 10,
 					navigation: {
 						nextEl: '.our-team-swiper-button.swiper-button-next',
 						prevEl: '.our-team-swiper-button.swiper-button-prev',
 					},
-					on: {
-						slideChange: function () {
-							// lazyLoadInstance.update();
-						},
-					},
 					breakpoints: {
+						768: {
+							speed: 600,
+							slidesPerView: 2,
+							slidesPerGroup: 2,
+							spaceBetween: 20
+						},
 						1400: {
 							speed: 1000,
 							slidesPerView: 3,
@@ -162,6 +146,17 @@ $(document).ready(function () {
 					}
 				});
 			}
+
+			/* our team slider */
+			/* ourTeamSliderInit = false;
+			if (ourTeamSlider) {
+				ourTeamSlider.destroy();
+			} */
+
+		}
+
+		if (queryS.matches) {
+
 		}
 
 		if (queryMD.matches) {
@@ -273,6 +268,26 @@ $(document).ready(function () {
 		});
 	}
 
+
+	/* accordion */
+	$(".faq-item__title").on("click", function (e) {
+
+		e.preventDefault();
+		let $this = $(this);
+
+		if (!$this.hasClass("accordion-active")) {
+			$(".faq-item__content").slideUp(400);
+			$(".faq-item__title").removeClass("accordion-active");
+			$this.next().slideDown(400);
+			$this.toggleClass("accordion-active");
+			$this.next().slideDown(400);
+		} else {
+			$this.toggleClass("accordion-active");
+			$this.next().slideUp(400);
+		}
+
+
+	});
 
 
 	/* Animate On Scroll */

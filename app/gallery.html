@@ -1,321 +1,65 @@
-<!DOCTYPE html>
-<html lang="ru">
+@@include('./header.part.html', {
+'class': 'not-home',
+'title': 'Галерея',
+})
 
-<head>
-	<meta charset="utf-8">
-	<meta name="description" content="Excerpt about company">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<title>Галерея | Q:Clinic</title>
-
-	<link rel="icon" href="images/favicon.png">
-
-	<link rel="stylesheet" href="library/bootstrap/bootstrap-reboot.min.css">
-	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="library/bootstrap/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="library/fancybox/jquery.fancybox.min.css">
-
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
-</head>
-
-<body class="not-home">
-	<main id="page">
-		<div class="page-container">
-
-			<header id="header" class="header">
-				<div class="container">
-					<div class="header__inner d-flex align-items-center justify-content-center">
-						<a href="/" class="header__logo me-auto" aria-label="Q:Clinic">
-							<svg viewBox="0 0 148 35">
-								<use href="images/sprite.svg#logo"></use>
-							</svg>
-						</a>
-						<nav class="header__nav d-none d-xl-block">
-							<ul>
-								<li><a href="/about">О клинике</a></li>
-								<li><a href="/uslugi">Услуги и цены</a></li>
-								<li><a href="/doctors">Врачи</a></li>
-								<li><a href="/reviews">Отзывы</a></li>
-								<li><a href="/guarantee">Гарантии</a></li>
-								<li><a href="/contacts">Контакты</a></li>
-							</ul>
-						</nav>
-
-						<div class="header__lang header-lang ms-auto d-none d-xl-block">
-							<div class="header-lang__wrap">
-								<ul>
-									<li class="lang-item lang-ru current-lang"><a href="/ru">ru</a></li>
-									<li class="lang-item lang-ua"><a href="/ua">ua</a></li>
-								</ul>
-							</div>
-							<div class="header-lang__all header-lang__all">
-								<ul>
-									<li class="lang-item lang-ru current-lang"><a href="/ru">ru</a></li>
-									<li class="lang-item lang-ua"><a href="/ua">ua</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<button class="header__action button button--outline d-none d-xl-inline-flex m-0">Связаться</button>
-
-						<button class="menu-toggle d-xl-none">
-							<div class="menu-toggle-icon"><span></span></div>
-						</button>
-					</div>
-				</div>
-				<!-- mobile-nav -->
-				<div class="header__mobile-nav mobile-nav d-xl-none">
-					<div class="mobile-nav__container d-flex flex-column align-items-start">
-						<div class="mobile-nav__head d-flex justify-content-between">
-							<a href="/" class="header__logo me-auto" aria-label="Q:Clinic">
-								<svg viewBox="0 0 148 35">
-									<use href="images/sprite.svg#logo"></use>
-								</svg>
-							</a>
-							<button class="menu-toggle menu-toggle--close">
-								<div class="menu-toggle-icon"><span></span></div>
-							</button>
-						</div>
-						<nav class="header__nav">
-							<ul>
-								<li><a href="/about">О клинике</a></li>
-								<li><a href="/uslugi">Услуги и цены</a></li>
-								<li><a href="/doctors">Врачи</a></li>
-								<li><a href="/reviews">Отзывы</a></li>
-								<li><a href="/guarantee">Гарантии</a></li>
-								<li><a href="/contacts">Контакты</a></li>
-							</ul>
-						</nav>
-
-						<button class="header__action button button--outline mt-4 mb-5">Связаться</button>
-
-						<a href="#" class="mb-3" target="_blank" style="font: var(--text01); color: var(--heading)">г. Киев, ул. Жилянская, 30А</a>
-						<p>9:00 до 21:00, <br>Воскресенье - выходной</p>
-
-						<div class="header__lang header-lang">
-							<div class="header-lang__wrap">
-								<ul>
-									<li class="lang-item lang-ru current-lang"><a href="/ru">ru</a></li>
-									<li class="lang-item lang-ua"><a href="/ua">ua</a></li>
-								</ul>
-							</div>
-							<div class="header-lang__all header-lang__all">
-								<ul>
-									<li class="lang-item lang-ru current-lang"><a href="/ru">ru</a></li>
-									<li class="lang-item lang-ua"><a href="/ua">ua</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</header>
-
-			<section class="intro">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-xl-5 d-flex flex-column justify-content-end">
-							<h1 class="intro__title">Фото нашей клиники</h1>
-							<div class="d-flex breadcrumb-wrapper" aria-label="breadcrumb">
-								<ul class="breadcrumb">
-									<li><a href="/">Главная</a></li>
-									<li>/</li>
-									<li>Галерея</li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-md-6 offset-xl-1">
-							<div class="img-cover intro__image"><img src="images/gallery-intro.jpg" alt="gallery-intro.jpg"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<div class="gallery">
-				<div class="container">
-
-					<div id="gallery-grid" class="gallery__wrapper">
-
-						<div class="gallery__item">
-							<a href="images/gallery/gallery01.jpg" style="background-image: url('images/gallery/gallery01.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery01.jpg" alt="gallery01"></a>
-						</div>
-						<div class="gallery__item">
-							<a href="images/gallery/gallery02.jpg" style="background-image: url('images/gallery/gallery02.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery02.jpg" alt="gallery02"></a>
-						</div>
-						<div class="gallery__item" style="width: 100%;">
-							<a href="images/gallery/gallery03.jpg" style="background-image: url('images/gallery/gallery03.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery03.jpg" alt="gallery03"></a>
-						</div>
-						<div class="gallery__item">
-							<a href="images/gallery/gallery04.jpg" style="background-image: url('images/gallery/gallery04.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery04.jpg" alt="gallery04"></a>
-						</div>
-						<div class="gallery__item">
-							<a href="images/gallery/gallery05.jpg" style="background-image: url('images/gallery/gallery05.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery05.jpg" alt="gallery05"></a>
-						</div>
-						<div class="gallery__item">
-							<a href="images/gallery/gallery06.jpg" style="background-image: url('images/gallery/gallery06.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery06.jpg" alt="gallery06"></a>
-						</div>
-						<div class="gallery__item">
-							<a href="images/gallery/gallery07.jpg" style="background-image: url('images/gallery/gallery07.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery07.jpg" alt="gallery07"></a>
-						</div>
-						<div class="gallery__sizer"></div>
-						<div class="gallery__gutter"></div>
-						<svg class="cta-circle" width="100" height="100" viewBox="0 0 130 130">
-							<use href="images/sprite.svg#cta-qclinic"></use>
-						</svg>
-					</div>
+<section class="intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-xl-5 d-flex flex-column justify-content-end">
+				<h1 class="intro__title">Фото нашей клиники</h1>
+				<div class="d-flex breadcrumb-wrapper" aria-label="breadcrumb">
+					<ul class="breadcrumb">
+						<li><a href="/">Главная</a></li>
+						<li>/</li>
+						<li>Галерея</li>
+					</ul>
 				</div>
 			</div>
-
-			<section class="register">
-				<div class="container">
-					<div class="register-container row">
-						<div class="col-lg-7 register__left-wrapper">
-							<svg class="cta-circle" width="100" height="100" viewBox="0 0 130 130">
-								<use href="images/sprite.svg#pochustvuy-kachestvo"></use>
-							</svg>
-							<div class="register__left col-lg-11">
-								<h3 class="title">Запишитесь на бесплатную <br> онлайн-консультацию</h3>
-								<div class="register-form">
-									<form action="gg.php">
-										<div class="row">
-											<div class="col-md-6">
-												<input type="text" name="name" placeholder="ФИО">
-											</div>
-											<div class="col-md-6">
-												<input type="tel" name="telephone" placeholder="Номер телефона">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<input type="email" name="email" placeholder="E-mail">
-											</div>
-											<div class="col-md-6">
-												<select name="usluga">
-													<option value="usluga">Услуга</option>
-													<option value="usluga">Логопедия</option>
-													<option value="usluga">Ортопедия</option>
-													<option value="usluga">Хирургия</option>
-													<option value="usluga">Парадонтология</option>
-													<option value="usluga">Анастезия</option>
-													<option value="usluga">Ортодонт</option>
-												</select>
-											</div>
-										</div>
-										<div class="row">
-											<div>
-												<textarea placeholder="Комментарий" name="message" cols="1" rows="1"></textarea>
-											</div>
-										</div>
-										<div>
-											<span class="wpcf7-form-control-wrap">
-												<span class="wpcf7-form-control wpcf7-acceptance">
-													<span class="wpcf7-list-item">
-														<label><input type="checkbox" value="1" aria-invalid="false" checked="checked">
-															<span class="wpcf7-list-item-label">Принимаю условия <a href="#" target="_blank">политики конфиденциальности</a></span>
-														</label>
-													</span>
-												</span>
-											</span>
-										</div>
-										<button type="submit" class="button">
-											<svg class="button__icon">
-												<use href="images/sprite.svg#mini-logo"></use>
-											</svg>Отправить заявку</button>
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-5 register__right-wrapper">
-							<div class="register__right">
-								<div class="img-cover">
-									<img src="images/team/larisa.png" alt="Лариса - менеджер">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
+			<div class="col-md-6 offset-xl-1">
+				<div class="img-cover intro__image"><img src="images/gallery-intro.jpg" alt="gallery-intro.jpg"></div>
+			</div>
 		</div>
+	</div>
+</section>
 
-		<footer id="footer" class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="contact-form contact-form--mailing d-flex flex-column col-md-5 col-lg-4">
-						<p class="h3 contact-form__title">Подписывайтесь на нашу рассылку</p>
-						<form action="gg.php">
-							<div>
-								<input type="email" placeholder="E-mail">
-							</div>
-							<button class="button" type="submit">
-								<svg class="button__icon">
-									<use href="images/sprite.svg#mini-logo"></use>
-								</svg>отправить</button>
-						</form>
-						<a href="/privacy-policy.html" class="d-none d-md-inline mt-auto mt-lg-3 align-self-start " style="color: #989898;">Политика конфиденциальности</a>
-					</div>
+<div class="gallery">
+	<div class="container">
 
-					<div class="col-md-6 offset-md-1 offset-xl-2 mt-lg-0 footer__menu">
-						<div class="row">
-							<nav class="col-6 col-lg-4">
-								<ul>
-									<li><a href="/about.html">О клинике</a></li>
-									<li><a href="/uslugi.html">Услуги и цены</a></li>
-									<li><a href="/odejda.html">Одноразовая одежда</a></li>
-									<li><a href="/doctors.html">Врачи</a></li>
-									<li><a href="/guarantee.html">Гарантии</a></li>
-								</ul>
-							</nav>
-							<nav class="col-6 col-lg-3">
-								<ul>
-									<li><a href="/contacts.html">Контакты</a></li>
-									<li><a href="/posts.html">Статьи</a></li>
-									<li><a href="/faq.html">Вопрос ответ</a></li>
-									<li><a href="/gallery.html">Галерея</a></li>
-									<li><a href="/our.html-works">Наши работы</a></li>
-								</ul>
-							</nav>
-							<nav class="col-6 col-lg-3 my-4 mb-md-0 my-lg-0">
-								<ul>
-									<li><a href="/faq.html">Вопросы</a></li>
-									<li><a href="/guarantee.html">Гарантии</a></li>
-								</ul>
-							</nav>
-							<ul class="col-6 col-lg-2 my-4 mb-md-0 d-flex footer__social align-items-end justify-content-xl-end">
-								<li>
-									<a href="#facebook" class="d-inline-block me-3" aria-label="Фейсбук страница компании">
-										<svg>
-											<use href="images/sprite.svg#facebook"></use>
-										</svg>
-									</a>
-								</li>
-								<li>
-									<a href="#instagram" class="d-inline-block" aria-label="Инстаграм компании">
-										<svg>
-											<use href="images/sprite.svg#instagram"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+		<div id="gallery-grid" class="gallery__wrapper">
 
-					<a href="/privacy-policy" class="d-md-none" style="color: #989898;">Политика конфиденциальности</a>
-				</div>
+			<div class="gallery__item">
+				<a href="images/gallery/gallery01.jpg" style="background-image: url('images/gallery/gallery01.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery01.jpg" alt="gallery01"></a>
 			</div>
-		</footer>
+			<div class="gallery__item">
+				<a href="images/gallery/gallery02.jpg" style="background-image: url('images/gallery/gallery02.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery02.jpg" alt="gallery02"></a>
+			</div>
+			<div class="gallery__item" style="width: 100%;">
+				<a href="images/gallery/gallery03.jpg" style="background-image: url('images/gallery/gallery03.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery03.jpg" alt="gallery03"></a>
+			</div>
+			<div class="gallery__item">
+				<a href="images/gallery/gallery04.jpg" style="background-image: url('images/gallery/gallery04.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery04.jpg" alt="gallery04"></a>
+			</div>
+			<div class="gallery__item">
+				<a href="images/gallery/gallery05.jpg" style="background-image: url('images/gallery/gallery05.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery05.jpg" alt="gallery05"></a>
+			</div>
+			<div class="gallery__item">
+				<a href="images/gallery/gallery06.jpg" style="background-image: url('images/gallery/gallery06.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery06.jpg" alt="gallery06"></a>
+			</div>
+			<div class="gallery__item">
+				<a href="images/gallery/gallery07.jpg" style="background-image: url('images/gallery/gallery07.jpg');" data-fancybox="gallery-grid" class="img-cover"><img src="images/gallery/gallery07.jpg" alt="gallery07"></a>
+			</div>
+			<div class="gallery__sizer"></div>
+			<div class="gallery__gutter"></div>
+			<svg class="cta-circle" width="100" height="100" viewBox="0 0 130 130">
+				<use href="images/sprite.svg#cta-qclinic"></use>
+			</svg>
+		</div>
+	</div>
+</div>
 
-	</main>
+@@include('./register.part.html', {
+'title': 'Подать заявку на прием',
+})
 
-	<script src="library/jquery/jquery-3.5.0.min.js"></script>
-	<script src="library/swiper/swiper-bundle.min.js"></script>
-	<script src="library/jquery-formstyler/jquery.formstyler.min.js"></script>
-	<script src="library/imagesLoaded/imagesloaded.pkgd.min.js"></script>
-	<script src="library/fancybox/jquery.fancybox.min.js"></script>
-	<script src="library/isotope/isotope.pkgd.min.js"></script>
-	<script src="js/main.js"></script>
-
-</body>
-
-</html>
+@@include('./footer.part.html')

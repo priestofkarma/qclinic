@@ -3,7 +3,7 @@
 	&-list {
 		overflow: visible;
 		&__wrapper {
-			display: block;
+			// display: block;
 		}
 	}
 
@@ -78,10 +78,11 @@
 	}
 }
 
-@media (max-width: 575px) {
+/* @media (max-width: 575px) {
 	.our-team-slider {
 		.swiper-slide:nth-child(n + 3) {
 			display: none;
 		}
 	}
 }
+ */

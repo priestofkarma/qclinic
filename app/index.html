@@ -1,935 +1,681 @@
-<!DOCTYPE html>
-<html lang="ru">
+@@include('./header.part.html', {
+'class': 'home',
+'title': 'Главная',
+})
 
-<head>
-	<meta charset="utf-8">
-	<meta name="description" content="Excerpt about company">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<title>Главная | Q:Clinic</title>
-
-	<link rel="icon" href="images/favicon.png">
-
-	<link rel="stylesheet" href="library/bootstrap/bootstrap-reboot.min.css">
-	<link rel="stylesheet" href="library/swiper/swiper-bundle.min.css" />
-	<link rel="stylesheet" href="library/bootstrap/bootstrap-grid.min.css">
-
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/media.css">
-</head>
-
-<body class="home">
-	<main id="page">
-		<div class="page-container">
-
-			<header id="header" class="header">
+<section class="hero">
+	<div class="hero__slider hero-slider swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
 				<div class="container">
-					<div class="header__inner d-flex align-items-center justify-content-center">
-						<a href="/" class="header__logo me-auto" aria-label="Q:Clinic">
-							<svg viewBox="0 0 148 35">
-								<use href="images/sprite.svg#logo"></use>
-							</svg>
-						</a>
-						<nav class="header__nav d-none d-xl-block">
-							<ul>
-								<li><a href="/about.html">О клинике</a></li>
-								<li><a href="/uslugi.html">Услуги и цены</a></li>
-								<li><a href="/doctors.html">Врачи</a></li>
-								<li><a href="/reviews.html">Отзывы</a></li>
-								<li><a href="/guarantee.html">Гарантии</a></li>
-								<li><a href="/contacts.html">Контакты</a></li>
-							</ul>
-						</nav>
-
-						<div class="header__lang header-lang ms-auto d-none d-xl-block">
-							<div class="header-lang__wrap">
-								<ul>
-									<li class="lang-item lang-ru current-lang"><a href="/ru">ru</a></li>
-									<li class="lang-item lang-ua"><a href="/ua">ua</a></li>
-								</ul>
-							</div>
-							<div class="header-lang__all header-lang__all">
-								<ul>
-									<li class="lang-item lang-ru current-lang"><a href="/ru">ru</a></li>
-									<li class="lang-item lang-ua"><a href="/ua">ua</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<button class="header__action button button--outline d-none d-xl-inline-flex m-0">Связаться</button>
-
-						<button class="menu-toggle d-xl-none">
-							<div class="menu-toggle-icon"><span></span></div>
-						</button>
-					</div>
-				</div>
-				<!-- mobile-nav -->
-				<div class="header__mobile-nav mobile-nav d-xl-none">
-					<div class="mobile-nav__container d-flex flex-column align-items-start">
-						<div class="mobile-nav__head d-flex justify-content-between">
-							<a href="/" class="header__logo me-auto" aria-label="Q:Clinic">
-								<svg viewBox="0 0 148 35">
-									<use href="images/sprite.svg#logo"></use>
-								</svg>
-							</a>
-							<button class="menu-toggle menu-toggle--close">
-								<div class="menu-toggle-icon"><span></span></div>
-							</button>
-						</div>
-						<nav class="header__nav">
-							<ul>
-								<li><a href="/about.html">О клинике</a></li>
-								<li><a href="/uslugi.html">Услуги и цены</a></li>
-								<li><a href="/doctors.html">Врачи</a></li>
-								<li><a href="/reviews.html">Отзывы</a></li>
-								<li><a href="/guarantee.html">Гарантии</a></li>
-								<li><a href="/contacts.html">Контакты</a></li>
-							</ul>
-						</nav>
-
-						<button class="header__action button button--outline mt-4 mb-5">Связаться</button>
-
-						<a href="#" class="mb-3" target="_blank" style="font: var(--text01); color: var(--heading)">г. Киев, ул. Жилянская, 30А</a>
-						<p>9:00 до 21:00, <br>Воскресенье - выходной</p>
-
-						<div class="header__lang header-lang">
-							<div class="header-lang__wrap">
-								<ul>
-									<li class="lang-item lang-ru current-lang"><a href="/ru">ru</a></li>
-									<li class="lang-item lang-ua"><a href="/ua">ua</a></li>
-								</ul>
-							</div>
-							<div class="header-lang__all header-lang__all">
-								<ul>
-									<li class="lang-item lang-ru current-lang"><a href="/ru">ru</a></li>
-									<li class="lang-item lang-ua"><a href="/ua">ua</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</header>
-
-			<section class="hero">
-				<div class="hero__slider hero-slider swiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="container">
-								<div class="img-cover"><img src="images/hero-slide01.jpg" alt="image"></div>
-								<img class="image " width="117" height="90" src="images/hero-img-01.svg" alt="image">
-								<p class="h2 title">Брекеты, которые <br> <b>никто не увидит</b></p>
-								<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться.</p>
-								<a href="#" class="button">
-									<svg class="button__icon">
-										<use href="images/sprite.svg#mini-logo"></use>
-									</svg>Онлайн консультация</a>
-							</div>
-						</div>
-
-						<div class="swiper-slide">
-							<div class="container">
-								<div class="img-cover"><img src="images/hero-slide02.jpg" alt="image"></div>
-								<img class="image " width="117" height="90" src="images/hero-img-01.svg" alt="image">
-								<p class="h2 title">Имлпанты, которые <br> <b>не приносят дискомфорта</b></p>
-								<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться.</p>
-								<a href="#" class="button">
-									<svg class="button__icon">
-										<use href="images/sprite.svg#mini-logo"></use>
-									</svg>Онлайн консультация</a>
-							</div>
-						</div>
-
-						<div class="swiper-slide">
-							<div class="container">
-								<div class="img-cover"><img src="images/hero-slide03.jpg" alt="image"></div>
-								<img class="image " width="117" height="90" src="images/hero-img-01.svg" alt="image">
-								<p class="h2 title">Доктора, которых <br> <b>не стоит бояться</b></p>
-								<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться.</p>
-								<a href="#" class="button">
-									<svg class="button__icon">
-										<use href="images/sprite.svg#mini-logo"></use>
-									</svg>Онлайн консультация</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="hero-pagination swiper-pagination"></div>
-			</section>
-
-			<section class="benefits">
-				<div class="container">
-					<div class="swiper benefits-slider">
-						<div class="swiper-wrapper row">
-							<div class="col-md-6 col-lg-4 swiper-slide">
-								<div class="benefits__item benefits-item">
-									<div class="benefits-item__head d-flex justify-content-between align-items-center">
-										<h3 class="h3 title">Лучшая клиника</h3>
-										<img class="image " src="images/benef01.svg" alt="benefit">
-									</div>
-									<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
-								</div>
-							</div>
-							<div class="col-md-6 col-lg-4 swiper-slide">
-								<div class="benefits__item benefits-item">
-									<div class="benefits-item__head d-flex justify-content-between align-items-center">
-										<h3 class="h3 title">Лучшая клиника</h3>
-										<img class="image " src="images/benef02.svg" alt="benefit">
-									</div>
-									<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
-								</div>
-							</div>
-							<div class="col-md-6 col-lg-4 swiper-slide">
-								<div class="benefits__item benefits-item">
-									<div class="benefits-item__head d-flex justify-content-between align-items-center">
-										<h3 class="h3 title">Лучшая клиника</h3>
-										<img class="image " src="images/benef03.svg" alt="benefit">
-									</div>
-									<p class="text">Получите совершенно бесплатную</p>
-								</div>
-							</div>
-							<div class="col-md-6 col-lg-4 swiper-slide">
-								<div class="benefits__item benefits-item">
-									<div class="benefits-item__head d-flex justify-content-between align-items-center">
-										<h3 class="h3 title">Лучшая клиника</h3>
-										<img class="image " src="images/benef04.svg" alt="benefit">
-									</div>
-									<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
-								</div>
-							</div>
-							<div class="col-md-6 col-lg-4 swiper-slide">
-								<div class="benefits__item benefits-item">
-									<div class="benefits-item__head d-flex justify-content-between align-items-center">
-										<h3 class="h3 title">Лучшая клиника</h3>
-										<img class="image " src="images/benef05.svg" alt="benefit">
-									</div>
-									<p class="text">Получите совершенно бесплатную</p>
-								</div>
-							</div>
-							<div class="col-md-6 col-lg-4 swiper-slide">
-								<div class="benefits__item benefits-item">
-									<div class="benefits-item__head d-flex justify-content-between align-items-center">
-										<h3 class="h3 title">Лучшая клиника</h3>
-										<img class="image " src="images/benef06.svg" alt="benefit">
-									</div>
-									<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
-								</div>
-							</div>
-						</div>
-						<div class="benefits-pagination swiper-pagination"></div>
-					</div>
-				</div>
-			</section>
-
-
-			<section class="services">
-				<div class="container">
-					<div class="default-slider-head d-flex flex-wrap align-items-center justify-content-between">
-						<h2 class="h3 title">Наши услуги</h2>
-						<div class="swiper-buttons-container ms-auto">
-							<button type="button" aria-label="Предыдущий слайд" class="services-swiper-button swiper-button-prev">
-								<svg viewBox="0 0 20 17">
-									<use href="images/sprite.svg#arrow-right"></use>
-								</svg>
-							</button>
-							<button type="button" aria-label="Следующий слайд" class="services-swiper-button swiper-button-next">
-								<svg viewBox="0 0 20 17">
-									<use href="images/sprite.svg#arrow-right"></use>
-								</svg>
-							</button>
-						</div>
-					</div>
-					<div class="swiper services-slider services-list">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide services__item-wrap">
-								<div class="services__item">
-									<div class="img-cover"><img src="images/services01.jpg" alt="Лечение зубов"></div>
-									<div class="services__description">
-										<h3 class="title">Лечение зубов</h3>
-										<p class="text">При имплантации мы используем импланты топовых мировых производителей: Straumann, Ankylos, Osstem - их приживаемость составляет 98%, а срок службы может быть пожизненным.</p>
-										<a class="d-link" href="/single-uslugi.html">Подробнее</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide services__item-wrap">
-								<div class="services__item">
-									<div class="img-cover"><img src="images/services02.jpg" alt="Выравнивание зубов"></div>
-									<div class="services__description">
-										<h3 class="title">Выравнивание зубов</h3>
-										<p class="text">При имплантации мы используем импланты топовых мировых производителей: Straumann, Ankylos, Osstem - их приживаемость составляет 98%, а срок службы может быть пожизненным.</p>
-										<a class="d-link" href="/single-uslugi.html">Подробнее</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide services__item-wrap">
-								<div class="services__item">
-									<div class="img-cover"><img src="images/services03.jpg" alt="Лечение зубов"></div>
-									<div class="services__description">
-										<h3 class="title">Лечение зубов</h3>
-										<p class="text">При имплантации мы используем импланты топовых мировых производителей: Straumann, Ankylos, Osstem - их приживаемость составляет 98%, а срок службы может быть пожизненным.</p>
-										<a class="d-link" href="/single-uslugi.html">Подробнее</a>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide services__item-wrap">
-								<div class="services__item">
-									<div class="img-cover"><img src="images/services04.jpg" alt="Выравнивание зубов"></div>
-									<div class="services__description">
-										<h3 class="title">Выравнивание зубов</h3>
-										<p class="text">При имплантации мы используем импланты топовых мировых производителей: Straumann, Ankylos, Osstem - их приживаемость составляет 98%, а срок службы может быть пожизненным.</p>
-										<a class="d-link" href="/single-uslugi.html">Подробнее</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<a href="/uslugi" class="button d-flex mx-auto mt-md-5 mt-xl-4 show-more-btn">
-							<svg class="button__icon">
-								<use href="images/sprite.svg#mini-logo"></use>
-							</svg>Смотреть все</a>
-					</div>
-				</div>
-			</section>
-
-
-			<section class="cta">
-				<div class="container">
-					<svg class="cta-circle" width="100" height="100" viewBox="0 0 130 130">
-						<use href="images/sprite.svg#pochustvuy-kachestvo"></use>
-					</svg>
-					<div class="swiper cta-slider cta-list">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="cta-item row">
-									<div class="col-md-6 cta-item__left">
-										<h3 class="title">Свободные 60 минут? - <br> время освежить улыбку</h3>
-										<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
-										<a href="#" class="button">
-											<svg class="button__icon">
-												<use href="images/sprite.svg#mini-logo"></use>
-											</svg>Онлайн консультация</a>
-									</div>
-									<div class="col-md-6 cta-item__right">
-										<div class="img-cover"><img width="430" height="460" src="images/cta01.png" alt="cta01"></div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="cta-item row">
-									<div class="col-md-6 cta-item__left">
-										<h3 class="title">Свободные 100 минут? - <br> время освежить улыбку</h3>
-										<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться. Получите совершенно бесплатную консультацию, достаточно только записаться.</p>
-										<a href="#" class="button">
-											<svg class="button__icon">
-												<use href="images/sprite.svg#mini-logo"></use>
-											</svg>Онлайн консультация</a>
-									</div>
-									<div class="col-md-6 cta-item__right">
-										<div class="img-cover"><img width="430" height="460" src="images/team/larisa.png" alt="cta01"></div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="cta-item row">
-									<div class="col-md-6 cta-item__left">
-										<h3 class="title">Свободные 40 минут? - <br> запишитесь на консультацию</h3>
-										<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
-										<a href="#" class="button">
-											<svg class="button__icon">
-												<use href="images/sprite.svg#mini-logo"></use>
-											</svg>Онлайн консультация</a>
-									</div>
-									<div class="col-md-6 cta-item__right">
-										<div class="img-cover"><img width="430" height="460" src="images/team/natalia.png" alt="cta01"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="cta-pagination swiper-pagination"></div>
-					</div>
-				</div>
-			</section>
-
-
-			<section class="our-team">
-				<div class="container">
-					<div class="default-slider-head d-flex flex-wrap align-items-center justify-content-between">
-						<h2 class="h3 title mb-0">Наша команда</h2>
-						<div class="swiper-buttons-container ms-auto d-none d-sm-flex">
-							<button type="button" aria-label="Предыдущий слайд" class="our-team-swiper-button swiper-button-prev">
-								<svg viewBox="0 0 20 17">
-									<use href="images/sprite.svg#arrow-right"></use>
-								</svg>
-							</button>
-							<button type="button" aria-label="Следующий слайд" class="our-team-swiper-button swiper-button-next">
-								<svg viewBox="0 0 20 17">
-									<use href="images/sprite.svg#arrow-right"></use>
-								</svg>
-							</button>
-						</div>
-					</div>
-					<div class="swiper our-team-slider our-team-list">
-						<div class="swiper-wrapper d-sm-flex our-team-list__wrapper">
-							<div class="swiper-slide our-team__item-wrapper">
-								<a href="/single-our-team.html" class="our-team__item">
-									<div class="img-cover"><img src="images/team/vadim.png" alt="Вадим Пархоменко"></div>
-									<div class="our-team__item-description">
-										<h3 class="title h3">Вадим Пархоменко</h3>
-										<p class="text">Врач стоматолог, ортапед</p>
-										<span class="info d-flex align-items-center">
-											<svg width="10" height="10" viewBox="0 0 10 10">
-												<use href="images/sprite.svg#clock"></use>
-											</svg>15 лет опыта</span>
-										<span class="info d-flex align-items-center">
-											<svg width="12" height="12" viewBox="0 0 12 11">
-												<use href="images/sprite.svg#star"></use>
-											</svg>145 отзывов</span>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide our-team__item-wrapper">
-								<a href="/single-our-team.html" class="our-team__item">
-									<div class="img-cover"><img src="images/team/larisa.png" alt="Лариса Слапенина"></div>
-									<div class="our-team__item-description">
-										<h3 class="title h3">Лариса Слапенина</h3>
-										<p class="text">Врач ортодонт</p>
-										<span class="info d-flex align-items-center">
-											<svg width="10" height="10" viewBox="0 0 10 10">
-												<use href="images/sprite.svg#clock"></use>
-											</svg>15 лет опыта</span>
-										<span class="info d-flex align-items-center">
-											<svg width="12" height="12" viewBox="0 0 12 11">
-												<use href="images/sprite.svg#star"></use>
-											</svg>145 отзывов</span>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide our-team__item-wrapper">
-								<a href="/single-our-team.html" class="our-team__item">
-									<div class="img-cover"><img src="images/team/natalia.png" alt="Наталья Веретенникова"></div>
-									<div class="our-team__item-description">
-										<h3 class="title h3">Наталья Веретенникова</h3>
-										<p class="text">Административный директор</p>
-										<span class="info d-flex align-items-center">
-											<svg width="10" height="10" viewBox="0 0 10 10">
-												<use href="images/sprite.svg#clock"></use>
-											</svg>15 лет опыта</span>
-										<span class="info d-flex align-items-center">
-											<svg width="12" height="12" viewBox="0 0 12 11">
-												<use href="images/sprite.svg#star"></use>
-											</svg>145 отзывов</span>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide our-team__item-wrapper">
-								<a href="/single-our-team.html" class="our-team__item">
-									<div class="img-cover"><img src="images/team/vadim.png" alt="Вадим Пархоменко"></div>
-									<div class="our-team__item-description">
-										<h3 class="title h3">Вадим Пархоменко</h3>
-										<p class="text">Врач стоматолог, ортапед</p>
-										<span class="info d-flex align-items-center">
-											<svg width="10" height="10" viewBox="0 0 10 10">
-												<use href="images/sprite.svg#clock"></use>
-											</svg>15 лет опыта</span>
-										<span class="info d-flex align-items-center">
-											<svg width="12" height="12" viewBox="0 0 12 11">
-												<use href="images/sprite.svg#star"></use>
-											</svg>145 отзывов</span>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide our-team__item-wrapper">
-								<a href="/single-our-team.html" class="our-team__item">
-									<div class="img-cover"><img src="images/team/larisa.png" alt="Лариса Слапенина"></div>
-									<div class="our-team__item-description">
-										<h3 class="title h3">Лариса Слапенина</h3>
-										<p class="text">Врач ортодонт</p>
-										<span class="info d-flex align-items-center">
-											<svg width="10" height="10" viewBox="0 0 10 10">
-												<use href="images/sprite.svg#clock"></use>
-											</svg>15 лет опыта</span>
-										<span class="info d-flex align-items-center">
-											<svg width="12" height="12" viewBox="0 0 12 11">
-												<use href="images/sprite.svg#star"></use>
-											</svg>145 отзывов</span>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide our-team__item-wrapper">
-								<a href="/single-our-team.html" class="our-team__item">
-									<div class="img-cover"><img src="images/team/natalia.png" alt="Наталья Веретенникова"></div>
-									<div class="our-team__item-description">
-										<h3 class="title h3">Наталья Веретенникова</h3>
-										<p class="text">Административный директор</p>
-										<span class="info d-flex align-items-center">
-											<svg width="10" height="10" viewBox="0 0 10 10">
-												<use href="images/sprite.svg#clock"></use>
-											</svg>15 лет опыта</span>
-										<span class="info d-flex align-items-center">
-											<svg width="12" height="12" viewBox="0 0 12 11">
-												<use href="images/sprite.svg#star"></use>
-											</svg>145 отзывов</span>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide our-team__item-wrapper">
-								<a href="/single-our-team.html" class="our-team__item">
-									<div class="img-cover"><img src="images/team/vadim.png" alt="Вадим Пархоменко"></div>
-									<div class="our-team__item-description">
-										<h3 class="title h3">Вадим Пархоменко</h3>
-										<p class="text">Врач стоматолог, ортапед</p>
-										<span class="info d-flex align-items-center">
-											<svg width="10" height="10" viewBox="0 0 10 10">
-												<use href="images/sprite.svg#clock"></use>
-											</svg>15 лет опыта</span>
-										<span class="info d-flex align-items-center">
-											<svg width="12" height="12" viewBox="0 0 12 11">
-												<use href="images/sprite.svg#star"></use>
-											</svg>145 отзывов</span>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide our-team__item-wrapper">
-								<a href="/single-our-team.html" class="our-team__item">
-									<div class="img-cover"><img src="images/team/larisa.png" alt="Лариса Слапенина"></div>
-									<div class="our-team__item-description">
-										<h3 class="title h3">Лариса Слапенина</h3>
-										<p class="text">Врач ортодонт</p>
-										<span class="info d-flex align-items-center">
-											<svg width="10" height="10" viewBox="0 0 10 10">
-												<use href="images/sprite.svg#clock"></use>
-											</svg>15 лет опыта</span>
-										<span class="info d-flex align-items-center">
-											<svg width="12" height="12" viewBox="0 0 12 11">
-												<use href="images/sprite.svg#star"></use>
-											</svg>145 отзывов</span>
-									</div>
-								</a>
-							</div>
-							<div class="swiper-slide our-team__item-wrapper">
-								<a href="/single-our-team.html" class="our-team__item">
-									<div class="img-cover"><img src="images/team/natalia.png" alt="Наталья Веретенникова"></div>
-									<div class="our-team__item-description">
-										<h3 class="title h3">Наталья Веретенникова</h3>
-										<p class="text">Административный директор</p>
-										<span class="info d-flex align-items-center">
-											<svg width="10" height="10" viewBox="0 0 10 10">
-												<use href="images/sprite.svg#clock"></use>
-											</svg>15 лет опыта</span>
-										<span class="info d-flex align-items-center">
-											<svg width="12" height="12" viewBox="0 0 12 11">
-												<use href="images/sprite.svg#star"></use>
-											</svg>145 отзывов</span>
-									</div>
-								</a>
-							</div>
-
-						</div>
-						<a href="/team" class="button d-flex mx-auto mt-md-3 show-more-btn">
-							<svg class="button__icon">
-								<use href="images/sprite.svg#mini-logo"></use>
-							</svg>Смотреть больше</a>
-					</div>
-				</div>
-			</section>
-
-
-			<section class="reviews">
-				<div class="container">
-					<div class="default-slider-head d-flex flex-wrap align-items-center justify-content-between">
-						<h2 class="h3 title">Отзывы о клинике</h2>
-						<div class="swiper-buttons-container ms-auto">
-							<button type="button" aria-label="Предыдущий слайд" class="reviews-swiper-button swiper-button-prev">
-								<svg viewBox="0 0 20 17">
-									<use href="images/sprite.svg#arrow-right"></use>
-								</svg>
-							</button>
-							<button type="button" aria-label="Следующий слайд" class="reviews-swiper-button swiper-button-next">
-								<svg viewBox="0 0 20 17">
-									<use href="images/sprite.svg#arrow-right"></use>
-								</svg>
-							</button>
-						</div>
-					</div>
-					<div class="swiper reviews-slider reviews-list">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="reviews__item reviews-item">
-									<div class="reviews-item__text">
-										<svg width="25" height="23" viewBox="0 0 25 23">
-											<use href="images/sprite.svg#quote"></use>
-										</svg>
-										<div class="text">
-											<p>Являюсь клиентом клиники с 2018 года. За это время удаляла зубы, ставила брекеты, делала регулярные чистки и просто лечила зубы. С учетом того, что получала в этой клинике разные услуги, могу уверенно утверждать, что клиника следит за тем, чтобы ее услуги всегда были на высоком уровне.</p>
-											<p>Мой доктор - Алина Сергеевна, и я всегда довольна визитами к ней. И чистки, и лечение зубов проходят одинаково безболезненно, а доктор всегда очень внимательна. Поэтому если ищете клинику, где можно быть уверенным в результате и своей безопасности, эта клиника - отличный выбор.</p>
-										</div>
-									</div>
-									<div class="reviews-item__user d-flex align-items-center">
-										<div class="userpic img-cover"><img src="images/reviews/userpic01.jpg" alt="Мария Осипчук"></div>
-										<div class="userinfo">
-											<div class="rating d-flex">
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-											</div>
-											<p class="name">Мария Осипчук</p>
-											<span class="date">09.08.2021</span>
-										</div>
-
-
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="reviews__item reviews-item">
-									<div class="reviews-item__text">
-										<svg width="25" height="23" viewBox="0 0 25 23">
-											<use href="images/sprite.svg#quote"></use>
-										</svg>
-										<div class="text">
-											<p>Великолепный сервис, осталась очень довольна! Рекомендую доктора Алину Апанасенко- супер профессионал, чуткий и добрый человек! 0 боли, здоровые и красивые зубы в результате! Наилучшие пожелания и процветания клинике!</p>
-										</div>
-									</div>
-									<div class="reviews-item__user d-flex align-items-center">
-										<div class="userpic img-cover"><img src="images/reviews/userpic02.jpg" alt="Тамара Попова"></div>
-										<div class="userinfo">
-											<div class="rating d-flex">
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-											</div>
-											<p class="name">Тамара Попова</p>
-											<span class="date">24.08.2021</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="reviews__item reviews-item">
-									<div class="reviews-item__text">
-										<svg width="25" height="23" viewBox="0 0 25 23">
-											<use href="images/sprite.svg#quote"></use>
-										</svg>
-										<div class="text">
-											<p>Отбелила зубы! Полный восторг! Уже год как живу в Киеве и искала именно это отбеливание - Zoom! Когда-то делала в Америке, результата хватило на 4 года. Нашла теперь и в Киеве, да дороговато - но результат того стоит!</p>
-											<p>Мне все понравилось и подход доктора и сервис, все были приветливые и даже отправляют фото до и после в вайбер и пробники паст! Прийду к вам снова! Спасибо большое - вы большие молодцы!</p>
-										</div>
-									</div>
-									<div class="reviews-item__user d-flex align-items-center">
-										<div class="userpic img-cover"><img src="images/reviews/userpic03.jpg" alt="Валерия Чистякова"></div>
-										<div class="userinfo">
-											<div class="rating d-flex">
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-											</div>
-											<p class="name">Валерия Чистякова</p>
-											<span class="date">11.07.2021</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="reviews__item reviews-item">
-									<div class="reviews-item__text">
-										<svg width="25" height="23" viewBox="0 0 25 23">
-											<use href="images/sprite.svg#quote"></use>
-										</svg>
-										<div class="text">
-											<p>Являюсь клиентом клиники с 2018 года. За это время удаляла зубы, ставила брекеты, делала регулярные чистки и просто лечила зубы. С учетом того, что получала в этой клинике разные услуги, могу уверенно утверждать, что клиника следит за тем, чтобы ее услуги всегда были на высоком уровне.</p>
-											<p>Мой доктор - Алина Сергеевна, и я всегда довольна визитами к ней. И чистки, и лечение зубов проходят одинаково безболезненно, а доктор всегда очень внимательна. Поэтому если ищете клинику, где можно быть уверенным в результате и своей безопасности, эта клиника - отличный выбор.</p>
-										</div>
-									</div>
-									<div class="reviews-item__user d-flex align-items-center">
-										<div class="userpic img-cover"><img src="images/reviews/userpic01.jpg" alt="Мария Осипчук"></div>
-										<div class="userinfo">
-											<div class="rating d-flex">
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-											</div>
-											<p class="name">Мария Осипчук</p>
-											<span class="date">09.08.2021</span>
-										</div>
-
-
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="reviews__item reviews-item">
-									<div class="reviews-item__text">
-										<svg width="25" height="23" viewBox="0 0 25 23">
-											<use href="images/sprite.svg#quote"></use>
-										</svg>
-										<div class="text">
-											<p>Великолепный сервис, осталась очень довольна! Рекомендую доктора Алину Апанасенко- супер профессионал, чуткий и добрый человек! 0 боли, здоровые и красивые зубы в результате! Наилучшие пожелания и процветания клинике!</p>
-										</div>
-									</div>
-									<div class="reviews-item__user d-flex align-items-center">
-										<div class="userpic img-cover"><img src="images/reviews/userpic02.jpg" alt="Тамара Попова"></div>
-										<div class="userinfo">
-											<div class="rating d-flex">
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-											</div>
-											<p class="name">Тамара Попова</p>
-											<span class="date">24.08.2021</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="reviews__item reviews-item">
-									<div class="reviews-item__text">
-										<svg width="25" height="23" viewBox="0 0 25 23">
-											<use href="images/sprite.svg#quote"></use>
-										</svg>
-										<div class="text">
-											<p>Отбелила зубы! Полный восторг! Уже год как живу в Киеве и искала именно это отбеливание - Zoom! Когда-то делала в Америке, результата хватило на 4 года. Нашла теперь и в Киеве, да дороговато - но результат того стоит!</p>
-											<p>Мне все понравилось и подход доктора и сервис, все были приветливые и даже отправляют фото до и после в вайбер и пробники паст! Прийду к вам снова! Спасибо большое - вы большие молодцы!</p>
-										</div>
-									</div>
-									<div class="reviews-item__user d-flex align-items-center">
-										<div class="userpic img-cover"><img src="images/reviews/userpic03.jpg" alt="Валерия Чистякова"></div>
-										<div class="userinfo">
-											<div class="rating d-flex">
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-												<svg width="15" height="14" viewBox="0 0 15 14">
-													<use href="images/sprite.svg#star"></use>
-												</svg>
-											</div>
-											<p class="name">Валерия Чистякова</p>
-											<span class="date">11.07.2021</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="register">
-				<div class="container">
-					<div class="register-container row">
-						<div class="col-lg-7 register__left-wrapper">
-							<svg class="cta-circle" width="100" height="100" viewBox="0 0 130 130">
-								<use href="images/sprite.svg#pochustvuy-kachestvo"></use>
-							</svg>
-							<div class="register__left col-lg-11">
-								<h3 class="title">Запишитесь на бесплатную <br> онлайн-консультацию</h3>
-								<div class="register-form">
-									<form action="gg.php">
-										<div class="row">
-											<div class="col-md-6">
-												<input type="text" name="name" placeholder="ФИО">
-											</div>
-											<div class="col-md-6">
-												<input type="tel" name="telephone" placeholder="Номер телефона">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<input type="email" name="email" placeholder="E-mail">
-											</div>
-											<div class="col-md-6">
-												<select name="usluga">
-													<option value="usluga">Услуга</option>
-													<option value="usluga">Логопедия</option>
-													<option value="usluga">Ортопедия</option>
-													<option value="usluga">Хирургия</option>
-													<option value="usluga">Парадонтология</option>
-													<option value="usluga">Анастезия</option>
-													<option value="usluga">Ортодонт</option>
-												</select>
-											</div>
-										</div>
-										<div class="row">
-											<div>
-												<textarea placeholder="Комментарий" name="message" cols="1" rows="1"></textarea>
-											</div>
-										</div>
-										<div>
-											<span class="wpcf7-form-control-wrap">
-												<span class="wpcf7-form-control wpcf7-acceptance">
-													<span class="wpcf7-list-item">
-														<label><input type="checkbox" value="1" aria-invalid="false" checked="checked">
-															<span class="wpcf7-list-item-label">Принимаю условия <a href="#" target="_blank">политики конфиденциальности</a></span>
-														</label>
-													</span>
-												</span>
-											</span>
-										</div>
-										<button type="submit" class="button">
-											<svg class="button__icon">
-												<use href="images/sprite.svg#mini-logo"></use>
-											</svg>Отправить заявку</button>
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-5 register__right-wrapper">
-							<div class="register__right">
-								<div class="img-cover">
-									<img src="images/team/larisa.png" alt="Лариса - менеджер">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		</div>
-
-		<footer id="footer" class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="contact-form contact-form--mailing d-flex flex-column col-md-5 col-lg-4">
-						<p class="h3 contact-form__title">Подписывайтесь на нашу рассылку</p>
-						<form action="gg.php">
-							<div>
-								<input type="email" placeholder="E-mail">
-							</div>
-							<button class="button" type="submit">
-								<svg class="button__icon">
-									<use href="images/sprite.svg#mini-logo"></use>
-								</svg>отправить</button>
-						</form>
-						<a href="/privacy-policy.html" class="d-none d-md-inline mt-auto mt-lg-3 align-self-start " style="color: #989898;">Политика конфиденциальности</a>
-					</div>
-
-					<div class="col-md-6 offset-md-1 offset-xl-2 mt-lg-0 footer__menu">
-						<div class="row">
-							<nav class="col-6 col-lg-4">
-								<ul>
-									<li><a href="/about.html">О клинике</a></li>
-									<li><a href="/uslugi.html">Услуги и цены</a></li>
-									<li><a href="/odejda.html">Одноразовая одежда</a></li>
-									<li><a href="/doctors.html">Врачи</a></li>
-									<li><a href="/guarantee.html">Гарантии</a></li>
-								</ul>
-							</nav>
-							<nav class="col-6 col-lg-3">
-								<ul>
-									<li><a href="/contacts.html">Контакты</a></li>
-									<li><a href="/posts.html">Статьи</a></li>
-									<li><a href="/faq.html">Вопрос ответ</a></li>
-									<li><a href="/gallery.html">Галерея</a></li>
-									<li><a href="/our.html-works">Наши работы</a></li>
-								</ul>
-							</nav>
-							<nav class="col-6 col-lg-3 my-4 mb-md-0 my-lg-0">
-								<ul>
-									<li><a href="/faq.html">Вопросы</a></li>
-									<li><a href="/guarantee.html">Гарантии</a></li>
-								</ul>
-							</nav>
-							<ul class="col-6 col-lg-2 my-4 mb-md-0 d-flex footer__social align-items-end justify-content-xl-end">
-								<li>
-									<a href="#facebook" class="d-inline-block me-3" aria-label="Фейсбук страница компании">
-										<svg>
-											<use href="images/sprite.svg#facebook"></use>
-										</svg>
-									</a>
-								</li>
-								<li>
-									<a href="#instagram" class="d-inline-block" aria-label="Инстаграм компании">
-										<svg>
-											<use href="images/sprite.svg#instagram"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<a href="/privacy-policy" class="d-md-none" style="color: #989898;">Политика конфиденциальности</a>
+					<div class="img-cover"><img src="images/hero-slide01.jpg" alt="image"></div>
+					<img class="image " width="117" height="90" src="images/hero-img-01.svg" alt="image">
+					<p class="h2 title">Брекеты, которые <br> <b>никто не увидит</b></p>
+					<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться.</p>
+					<a href="#" class="button">
+						<svg class="button__icon">
+							<use href="images/sprite.svg#mini-logo"></use>
+						</svg>Онлайн консультация</a>
 				</div>
 			</div>
-		</footer>
 
-	</main>
+			<div class="swiper-slide">
+				<div class="container">
+					<div class="img-cover"><img src="images/hero-slide02.jpg" alt="image"></div>
+					<img class="image " width="117" height="90" src="images/hero-img-01.svg" alt="image">
+					<p class="h2 title">Имлпанты, которые <br> <b>не приносят дискомфорта</b></p>
+					<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться.</p>
+					<a href="#" class="button">
+						<svg class="button__icon">
+							<use href="images/sprite.svg#mini-logo"></use>
+						</svg>Онлайн консультация</a>
+				</div>
+			</div>
 
-	<script src="library/jquery/jquery-3.5.0.min.js"></script>
-	<script src="library/swiper/swiper-bundle.min.js"></script>
-	<script src="library/jquery-formstyler/jquery.formstyler.min.js"></script>
-	<script src="library/imagesLoaded/imagesloaded.pkgd.min.js"></script>
-	<script src="library/fancybox/jquery.fancybox.min.js"></script>
-	<script src="library/isotope/isotope.pkgd.min.js"></script>
-	<script src="js/main.js"></script>
+			<div class="swiper-slide">
+				<div class="container">
+					<div class="img-cover"><img src="images/hero-slide03.jpg" alt="image"></div>
+					<img class="image " width="117" height="90" src="images/hero-img-01.svg" alt="image">
+					<p class="h2 title">Доктора, которых <br> <b>не стоит бояться</b></p>
+					<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться.</p>
+					<a href="#" class="button">
+						<svg class="button__icon">
+							<use href="images/sprite.svg#mini-logo"></use>
+						</svg>Онлайн консультация</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hero-pagination swiper-pagination"></div>
+</section>
 
-</body>
 
-</html>
+<section class="benefits">
+	<div class="container">
+		<div class="swiper benefits-slider">
+			<div class="swiper-wrapper row">
+				<div class="col-md-6 col-lg-4 swiper-slide">
+					<div class="benefits__item benefits-item">
+						<div class="benefits-item__head d-flex justify-content-between align-items-center">
+							<h3 class="h3 title">Лучшая клиника</h3>
+							<img class="image " src="images/benef01.svg" alt="benefit">
+						</div>
+						<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 swiper-slide">
+					<div class="benefits__item benefits-item">
+						<div class="benefits-item__head d-flex justify-content-between align-items-center">
+							<h3 class="h3 title">Лучшая клиника</h3>
+							<img class="image " src="images/benef02.svg" alt="benefit">
+						</div>
+						<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 swiper-slide">
+					<div class="benefits__item benefits-item">
+						<div class="benefits-item__head d-flex justify-content-between align-items-center">
+							<h3 class="h3 title">Лучшая клиника</h3>
+							<img class="image " src="images/benef03.svg" alt="benefit">
+						</div>
+						<p class="text">Получите совершенно бесплатную</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 swiper-slide">
+					<div class="benefits__item benefits-item">
+						<div class="benefits-item__head d-flex justify-content-between align-items-center">
+							<h3 class="h3 title">Лучшая клиника</h3>
+							<img class="image " src="images/benef04.svg" alt="benefit">
+						</div>
+						<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 swiper-slide">
+					<div class="benefits__item benefits-item">
+						<div class="benefits-item__head d-flex justify-content-between align-items-center">
+							<h3 class="h3 title">Лучшая клиника</h3>
+							<img class="image " src="images/benef05.svg" alt="benefit">
+						</div>
+						<p class="text">Получите совершенно бесплатную</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 swiper-slide">
+					<div class="benefits__item benefits-item">
+						<div class="benefits-item__head d-flex justify-content-between align-items-center">
+							<h3 class="h3 title">Лучшая клиника</h3>
+							<img class="image " src="images/benef06.svg" alt="benefit">
+						</div>
+						<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
+					</div>
+				</div>
+			</div>
+			<div class="benefits-pagination swiper-pagination"></div>
+		</div>
+	</div>
+</section>
+
+
+<section class="services">
+	<div class="container">
+		<div class="default-slider-head d-flex flex-wrap align-items-center justify-content-between">
+			<h2 class="h3 title">Наши услуги</h2>
+			<div class="swiper-buttons-container ms-auto">
+				<button type="button" aria-label="Предыдущий слайд" class="services-swiper-button swiper-button-prev">
+					<svg viewBox="0 0 20 17">
+						<use href="images/sprite.svg#arrow-right"></use>
+					</svg>
+				</button>
+				<button type="button" aria-label="Следующий слайд" class="services-swiper-button swiper-button-next">
+					<svg viewBox="0 0 20 17">
+						<use href="images/sprite.svg#arrow-right"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="swiper services-slider services-list">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide services__item-wrap">
+					<div class="services__item">
+						<div class="img-cover"><img src="images/services01.jpg" alt="Лечение зубов"></div>
+						<div class="services__description">
+							<h3 class="title">Лечение зубов</h3>
+							<p class="text">При имплантации мы используем импланты топовых мировых производителей: Straumann, Ankylos, Osstem - их приживаемость составляет 98%, а срок службы может быть пожизненным.</p>
+							<a class="d-link" href="/single-uslugi.html">Подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide services__item-wrap">
+					<div class="services__item">
+						<div class="img-cover"><img src="images/services02.jpg" alt="Выравнивание зубов"></div>
+						<div class="services__description">
+							<h3 class="title">Выравнивание зубов</h3>
+							<p class="text">При имплантации мы используем импланты топовых мировых производителей: Straumann, Ankylos, Osstem - их приживаемость составляет 98%, а срок службы может быть пожизненным.</p>
+							<a class="d-link" href="/single-uslugi.html">Подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide services__item-wrap">
+					<div class="services__item">
+						<div class="img-cover"><img src="images/services03.jpg" alt="Лечение зубов"></div>
+						<div class="services__description">
+							<h3 class="title">Лечение зубов</h3>
+							<p class="text">При имплантации мы используем импланты топовых мировых производителей: Straumann, Ankylos, Osstem - их приживаемость составляет 98%, а срок службы может быть пожизненным.</p>
+							<a class="d-link" href="/single-uslugi.html">Подробнее</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide services__item-wrap">
+					<div class="services__item">
+						<div class="img-cover"><img src="images/services04.jpg" alt="Выравнивание зубов"></div>
+						<div class="services__description">
+							<h3 class="title">Выравнивание зубов</h3>
+							<p class="text">При имплантации мы используем импланты топовых мировых производителей: Straumann, Ankylos, Osstem - их приживаемость составляет 98%, а срок службы может быть пожизненным.</p>
+							<a class="d-link" href="/single-uslugi.html">Подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="/uslugi" class="button d-flex mx-auto mt-md-5 mt-xl-4 show-more-btn">
+				<svg class="button__icon">
+					<use href="images/sprite.svg#mini-logo"></use>
+				</svg>Смотреть все</a>
+		</div>
+	</div>
+</section>
+
+
+<section class="cta">
+	<div class="container">
+		<svg class="cta-circle" width="100" height="100" viewBox="0 0 130 130">
+			<use href="images/sprite.svg#pochustvuy-kachestvo"></use>
+		</svg>
+		<div class="swiper cta-slider cta-list">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="cta-item row">
+						<div class="col-md-6 cta-item__left">
+							<h3 class="title">Свободные 60 минут? - <br> время освежить улыбку</h3>
+							<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
+							<a href="#" class="button">
+								<svg class="button__icon">
+									<use href="images/sprite.svg#mini-logo"></use>
+								</svg>Онлайн консультация</a>
+						</div>
+						<div class="col-md-6 cta-item__right">
+							<div class="img-cover"><img width="430" height="460" src="images/cta01.png" alt="cta01"></div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="cta-item row">
+						<div class="col-md-6 cta-item__left">
+							<h3 class="title">Свободные 100 минут? - <br> время освежить улыбку</h3>
+							<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться. Получите совершенно бесплатную консультацию, достаточно только записаться.</p>
+							<a href="#" class="button">
+								<svg class="button__icon">
+									<use href="images/sprite.svg#mini-logo"></use>
+								</svg>Онлайн консультация</a>
+						</div>
+						<div class="col-md-6 cta-item__right">
+							<div class="img-cover"><img width="430" height="460" src="images/team/larisa.png" alt="cta01"></div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="cta-item row">
+						<div class="col-md-6 cta-item__left">
+							<h3 class="title">Свободные 40 минут? - <br> запишитесь на консультацию</h3>
+							<p class="text">Получите совершенно бесплатную консультацию, достаточно только записаться</p>
+							<a href="#" class="button">
+								<svg class="button__icon">
+									<use href="images/sprite.svg#mini-logo"></use>
+								</svg>Онлайн консультация</a>
+						</div>
+						<div class="col-md-6 cta-item__right">
+							<div class="img-cover"><img width="430" height="460" src="images/team/natalia.png" alt="cta01"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cta-pagination swiper-pagination"></div>
+		</div>
+	</div>
+</section>
+
+
+<section class="our-team">
+	<div class="container">
+		<div class="default-slider-head d-flex flex-wrap align-items-center justify-content-between">
+			<h2 class="h3 title mb-0">Наша команда</h2>
+			<div class="swiper-buttons-container ms-auto d-flex">
+				<button type="button" aria-label="Предыдущий слайд" class="our-team-swiper-button swiper-button-prev">
+					<svg viewBox="0 0 20 17">
+						<use href="images/sprite.svg#arrow-right"></use>
+					</svg>
+				</button>
+				<button type="button" aria-label="Следующий слайд" class="our-team-swiper-button swiper-button-next">
+					<svg viewBox="0 0 20 17">
+						<use href="images/sprite.svg#arrow-right"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="swiper our-team-slider our-team-list">
+			<div class="swiper-wrapper d-sm-flex our-team-list__wrapper">
+				<div class="swiper-slide our-team__item-wrapper">
+					<a href="/single-our-team.html" class="our-team__item">
+						<div class="img-cover"><img src="images/team/vadim.png" alt="Вадим Пархоменко"></div>
+						<div class="our-team__item-description">
+							<h3 class="title h3">Вадим Пархоменко</h3>
+							<p class="text">Врач стоматолог, ортапед</p>
+							<span class="info d-flex align-items-center">
+								<svg width="10" height="10" viewBox="0 0 10 10">
+									<use href="images/sprite.svg#clock"></use>
+								</svg>15 лет опыта</span>
+							<span class="info d-flex align-items-center">
+								<svg width="12" height="12" viewBox="0 0 12 11">
+									<use href="images/sprite.svg#star"></use>
+								</svg>145 отзывов</span>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide our-team__item-wrapper">
+					<a href="/single-our-team.html" class="our-team__item">
+						<div class="img-cover"><img src="images/team/larisa.png" alt="Лариса Слапенина"></div>
+						<div class="our-team__item-description">
+							<h3 class="title h3">Лариса Слапенина</h3>
+							<p class="text">Врач ортодонт</p>
+							<span class="info d-flex align-items-center">
+								<svg width="10" height="10" viewBox="0 0 10 10">
+									<use href="images/sprite.svg#clock"></use>
+								</svg>15 лет опыта</span>
+							<span class="info d-flex align-items-center">
+								<svg width="12" height="12" viewBox="0 0 12 11">
+									<use href="images/sprite.svg#star"></use>
+								</svg>145 отзывов</span>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide our-team__item-wrapper">
+					<a href="/single-our-team.html" class="our-team__item">
+						<div class="img-cover"><img src="images/team/natalia.png" alt="Наталья Веретенникова"></div>
+						<div class="our-team__item-description">
+							<h3 class="title h3">Наталья Веретенникова</h3>
+							<p class="text">Административный директор</p>
+							<span class="info d-flex align-items-center">
+								<svg width="10" height="10" viewBox="0 0 10 10">
+									<use href="images/sprite.svg#clock"></use>
+								</svg>15 лет опыта</span>
+							<span class="info d-flex align-items-center">
+								<svg width="12" height="12" viewBox="0 0 12 11">
+									<use href="images/sprite.svg#star"></use>
+								</svg>145 отзывов</span>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide our-team__item-wrapper">
+					<a href="/single-our-team.html" class="our-team__item">
+						<div class="img-cover"><img src="images/team/vadim.png" alt="Вадим Пархоменко"></div>
+						<div class="our-team__item-description">
+							<h3 class="title h3">Вадим Пархоменко</h3>
+							<p class="text">Врач стоматолог, ортапед</p>
+							<span class="info d-flex align-items-center">
+								<svg width="10" height="10" viewBox="0 0 10 10">
+									<use href="images/sprite.svg#clock"></use>
+								</svg>15 лет опыта</span>
+							<span class="info d-flex align-items-center">
+								<svg width="12" height="12" viewBox="0 0 12 11">
+									<use href="images/sprite.svg#star"></use>
+								</svg>145 отзывов</span>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide our-team__item-wrapper">
+					<a href="/single-our-team.html" class="our-team__item">
+						<div class="img-cover"><img src="images/team/larisa.png" alt="Лариса Слапенина"></div>
+						<div class="our-team__item-description">
+							<h3 class="title h3">Лариса Слапенина</h3>
+							<p class="text">Врач ортодонт</p>
+							<span class="info d-flex align-items-center">
+								<svg width="10" height="10" viewBox="0 0 10 10">
+									<use href="images/sprite.svg#clock"></use>
+								</svg>15 лет опыта</span>
+							<span class="info d-flex align-items-center">
+								<svg width="12" height="12" viewBox="0 0 12 11">
+									<use href="images/sprite.svg#star"></use>
+								</svg>145 отзывов</span>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide our-team__item-wrapper">
+					<a href="/single-our-team.html" class="our-team__item">
+						<div class="img-cover"><img src="images/team/natalia.png" alt="Наталья Веретенникова"></div>
+						<div class="our-team__item-description">
+							<h3 class="title h3">Наталья Веретенникова</h3>
+							<p class="text">Административный директор</p>
+							<span class="info d-flex align-items-center">
+								<svg width="10" height="10" viewBox="0 0 10 10">
+									<use href="images/sprite.svg#clock"></use>
+								</svg>15 лет опыта</span>
+							<span class="info d-flex align-items-center">
+								<svg width="12" height="12" viewBox="0 0 12 11">
+									<use href="images/sprite.svg#star"></use>
+								</svg>145 отзывов</span>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide our-team__item-wrapper">
+					<a href="/single-our-team.html" class="our-team__item">
+						<div class="img-cover"><img src="images/team/vadim.png" alt="Вадим Пархоменко"></div>
+						<div class="our-team__item-description">
+							<h3 class="title h3">Вадим Пархоменко</h3>
+							<p class="text">Врач стоматолог, ортапед</p>
+							<span class="info d-flex align-items-center">
+								<svg width="10" height="10" viewBox="0 0 10 10">
+									<use href="images/sprite.svg#clock"></use>
+								</svg>15 лет опыта</span>
+							<span class="info d-flex align-items-center">
+								<svg width="12" height="12" viewBox="0 0 12 11">
+									<use href="images/sprite.svg#star"></use>
+								</svg>145 отзывов</span>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide our-team__item-wrapper">
+					<a href="/single-our-team.html" class="our-team__item">
+						<div class="img-cover"><img src="images/team/larisa.png" alt="Лариса Слапенина"></div>
+						<div class="our-team__item-description">
+							<h3 class="title h3">Лариса Слапенина</h3>
+							<p class="text">Врач ортодонт</p>
+							<span class="info d-flex align-items-center">
+								<svg width="10" height="10" viewBox="0 0 10 10">
+									<use href="images/sprite.svg#clock"></use>
+								</svg>15 лет опыта</span>
+							<span class="info d-flex align-items-center">
+								<svg width="12" height="12" viewBox="0 0 12 11">
+									<use href="images/sprite.svg#star"></use>
+								</svg>145 отзывов</span>
+						</div>
+					</a>
+				</div>
+				<div class="swiper-slide our-team__item-wrapper">
+					<a href="/single-our-team.html" class="our-team__item">
+						<div class="img-cover"><img src="images/team/natalia.png" alt="Наталья Веретенникова"></div>
+						<div class="our-team__item-description">
+							<h3 class="title h3">Наталья Веретенникова</h3>
+							<p class="text">Административный директор</p>
+							<span class="info d-flex align-items-center">
+								<svg width="10" height="10" viewBox="0 0 10 10">
+									<use href="images/sprite.svg#clock"></use>
+								</svg>15 лет опыта</span>
+							<span class="info d-flex align-items-center">
+								<svg width="12" height="12" viewBox="0 0 12 11">
+									<use href="images/sprite.svg#star"></use>
+								</svg>145 отзывов</span>
+						</div>
+					</a>
+				</div>
+
+			</div>
+			<a href="/team" class="button d-flex mx-auto mt-md-3 show-more-btn">
+				<svg class="button__icon">
+					<use href="images/sprite.svg#mini-logo"></use>
+				</svg>Смотреть больше</a>
+		</div>
+	</div>
+</section>
+
+
+<section class="reviews">
+	<div class="container">
+		<div class="default-slider-head d-flex flex-wrap align-items-center justify-content-between">
+			<h2 class="h3 title">Отзывы о клинике</h2>
+			<div class="swiper-buttons-container ms-auto">
+				<button type="button" aria-label="Предыдущий слайд" class="reviews-swiper-button swiper-button-prev">
+					<svg viewBox="0 0 20 17">
+						<use href="images/sprite.svg#arrow-right"></use>
+					</svg>
+				</button>
+				<button type="button" aria-label="Следующий слайд" class="reviews-swiper-button swiper-button-next">
+					<svg viewBox="0 0 20 17">
+						<use href="images/sprite.svg#arrow-right"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="swiper reviews-slider reviews-list">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="reviews__item reviews-item">
+						<div class="reviews-item__text">
+							<svg width="25" height="23" viewBox="0 0 25 23">
+								<use href="images/sprite.svg#quote"></use>
+							</svg>
+							<div class="text">
+								<p>Являюсь клиентом клиники с 2018 года. За это время удаляла зубы, ставила брекеты, делала регулярные чистки и просто лечила зубы. С учетом того, что получала в этой клинике разные услуги, могу уверенно утверждать, что клиника следит за тем, чтобы ее услуги всегда были на высоком уровне.</p>
+								<p>Мой доктор - Алина Сергеевна, и я всегда довольна визитами к ней. И чистки, и лечение зубов проходят одинаково безболезненно, а доктор всегда очень внимательна. Поэтому если ищете клинику, где можно быть уверенным в результате и своей безопасности, эта клиника - отличный выбор.</p>
+							</div>
+						</div>
+						<div class="reviews-item__user d-flex align-items-center">
+							<div class="userpic img-cover"><img src="images/reviews/userpic01.jpg" alt="Мария Осипчук"></div>
+							<div class="userinfo">
+								<div class="rating d-flex">
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<p class="name">Мария Осипчук</p>
+								<span class="date">09.08.2021</span>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="reviews__item reviews-item">
+						<div class="reviews-item__text">
+							<svg width="25" height="23" viewBox="0 0 25 23">
+								<use href="images/sprite.svg#quote"></use>
+							</svg>
+							<div class="text">
+								<p>Великолепный сервис, осталась очень довольна! Рекомендую доктора Алину Апанасенко- супер профессионал, чуткий и добрый человек! 0 боли, здоровые и красивые зубы в результате! Наилучшие пожелания и процветания клинике!</p>
+							</div>
+						</div>
+						<div class="reviews-item__user d-flex align-items-center">
+							<div class="userpic img-cover"><img src="images/reviews/userpic02.jpg" alt="Тамара Попова"></div>
+							<div class="userinfo">
+								<div class="rating d-flex">
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<p class="name">Тамара Попова</p>
+								<span class="date">24.08.2021</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="reviews__item reviews-item">
+						<div class="reviews-item__text">
+							<svg width="25" height="23" viewBox="0 0 25 23">
+								<use href="images/sprite.svg#quote"></use>
+							</svg>
+							<div class="text">
+								<p>Отбелила зубы! Полный восторг! Уже год как живу в Киеве и искала именно это отбеливание - Zoom! Когда-то делала в Америке, результата хватило на 4 года. Нашла теперь и в Киеве, да дороговато - но результат того стоит!</p>
+								<p>Мне все понравилось и подход доктора и сервис, все были приветливые и даже отправляют фото до и после в вайбер и пробники паст! Прийду к вам снова! Спасибо большое - вы большие молодцы!</p>
+							</div>
+						</div>
+						<div class="reviews-item__user d-flex align-items-center">
+							<div class="userpic img-cover"><img src="images/reviews/userpic03.jpg" alt="Валерия Чистякова"></div>
+							<div class="userinfo">
+								<div class="rating d-flex">
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<p class="name">Валерия Чистякова</p>
+								<span class="date">11.07.2021</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="reviews__item reviews-item">
+						<div class="reviews-item__text">
+							<svg width="25" height="23" viewBox="0 0 25 23">
+								<use href="images/sprite.svg#quote"></use>
+							</svg>
+							<div class="text">
+								<p>Являюсь клиентом клиники с 2018 года. За это время удаляла зубы, ставила брекеты, делала регулярные чистки и просто лечила зубы. С учетом того, что получала в этой клинике разные услуги, могу уверенно утверждать, что клиника следит за тем, чтобы ее услуги всегда были на высоком уровне.</p>
+								<p>Мой доктор - Алина Сергеевна, и я всегда довольна визитами к ней. И чистки, и лечение зубов проходят одинаково безболезненно, а доктор всегда очень внимательна. Поэтому если ищете клинику, где можно быть уверенным в результате и своей безопасности, эта клиника - отличный выбор.</p>
+							</div>
+						</div>
+						<div class="reviews-item__user d-flex align-items-center">
+							<div class="userpic img-cover"><img src="images/reviews/userpic01.jpg" alt="Мария Осипчук"></div>
+							<div class="userinfo">
+								<div class="rating d-flex">
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<p class="name">Мария Осипчук</p>
+								<span class="date">09.08.2021</span>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="reviews__item reviews-item">
+						<div class="reviews-item__text">
+							<svg width="25" height="23" viewBox="0 0 25 23">
+								<use href="images/sprite.svg#quote"></use>
+							</svg>
+							<div class="text">
+								<p>Великолепный сервис, осталась очень довольна! Рекомендую доктора Алину Апанасенко- супер профессионал, чуткий и добрый человек! 0 боли, здоровые и красивые зубы в результате! Наилучшие пожелания и процветания клинике!</p>
+							</div>
+						</div>
+						<div class="reviews-item__user d-flex align-items-center">
+							<div class="userpic img-cover"><img src="images/reviews/userpic02.jpg" alt="Тамара Попова"></div>
+							<div class="userinfo">
+								<div class="rating d-flex">
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<p class="name">Тамара Попова</p>
+								<span class="date">24.08.2021</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="reviews__item reviews-item">
+						<div class="reviews-item__text">
+							<svg width="25" height="23" viewBox="0 0 25 23">
+								<use href="images/sprite.svg#quote"></use>
+							</svg>
+							<div class="text">
+								<p>Отбелила зубы! Полный восторг! Уже год как живу в Киеве и искала именно это отбеливание - Zoom! Когда-то делала в Америке, результата хватило на 4 года. Нашла теперь и в Киеве, да дороговато - но результат того стоит!</p>
+								<p>Мне все понравилось и подход доктора и сервис, все были приветливые и даже отправляют фото до и после в вайбер и пробники паст! Прийду к вам снова! Спасибо большое - вы большие молодцы!</p>
+							</div>
+						</div>
+						<div class="reviews-item__user d-flex align-items-center">
+							<div class="userpic img-cover"><img src="images/reviews/userpic03.jpg" alt="Валерия Чистякова"></div>
+							<div class="userinfo">
+								<div class="rating d-flex">
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+									<svg width="15" height="14" viewBox="0 0 15 14">
+										<use href="images/sprite.svg#star"></use>
+									</svg>
+								</div>
+								<p class="name">Валерия Чистякова</p>
+								<span class="date">11.07.2021</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include('./register.part.html', {
+'title': 'Запишитесь на бесплатную <br> онлайн-консультацию',
+})
+
+@@include('./footer.part.html')
