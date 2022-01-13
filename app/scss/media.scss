@@ -214,6 +214,21 @@
 			}
 		}
 	}
+
+	/* before-after */
+	.before-after {
+		padding-bottom: rem(80);
+		&__text {
+			font-size: 16px;
+		}
+	}
+
+	.about-work {
+		&__text,
+		&__table {
+			font-size: 14px;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -229,7 +244,6 @@
 	.default-slider-head {
 		margin-bottom: rem(67);
 		.title {
-			font: var(--h2-font);
 			width: 45%;
 		}
 	}
@@ -396,6 +410,8 @@
 
 	/* faq */
 	.faq {
+		padding-top: rem(100);
+		padding-bottom: rem(140);
 		&-item {
 			.title {
 				max-width: 70%;
@@ -411,6 +427,12 @@
 @media (min-width: 1200px) {
 	:root {
 		--header-height: 100px;
+	}
+
+	.default-slider-head {
+		.title {
+			font: var(--h2-font);
+		}
 	}
 
 	.not-home {
@@ -441,6 +463,9 @@
 			&__lang {
 				background-color: transparent;
 				color: #fff;
+				&:hover {
+					color: var(--cyan);
+				}
 			}
 			&-lang__wrap .current-lang a:after {
 				content: url("../images/chevron-down-white.svg");
@@ -497,6 +522,10 @@
 	.intro {
 		&__title {
 			font: var(--h1-font);
+		}
+		.row,
+		.row > * {
+			--bs-gutter-x: 30px;
 		}
 	}
 
@@ -636,6 +665,50 @@
 		&__wrapper,
 		.gallery__item {
 			--bs-gutter-x: 30px;
+		}
+	}
+
+	/* before-after */
+	.before-after {
+		&__item {
+			margin-bottom: rem(46);
+		}
+		&__item,
+		&__item > * {
+			--bs-gutter-x: 30px;
+		}
+		.img-cover {
+			margin-bottom: rem(25);
+		}
+	}
+
+	/* about-work */
+
+	.about-work {
+		&__title {
+			font: var(--h2-font);
+		}
+		&__text,
+		&__table,
+		&__right {
+			font-size: 1rem;
+		}
+		&__text {
+			max-width: 90%;
+		}
+		&__left {
+			margin-top: rem(60);
+		}
+		&__right {
+			.title {
+				font: var(--h3-font);
+			}
+		}
+		&__table {
+			margin-top: rem(60);
+			td > * {
+				max-width: 80%;
+			}
 		}
 	}
 }

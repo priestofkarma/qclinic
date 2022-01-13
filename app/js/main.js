@@ -266,6 +266,14 @@ $(document).ready(function () {
 				zoom(e);
 			});
 		});
+
+		let beforeAfter = document.querySelectorAll(".before-after .img-cover");
+		beforeAfter.forEach(image => {
+			image.addEventListener("mousemove", function (e) {
+				zoom(e);
+			});
+		});
+
 	}
 
 

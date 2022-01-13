@@ -3,24 +3,26 @@
 //   table-layout: fixed;
 // }
 table {
-  border-spacing: 0;
-  overflow-x: auto;
-  text-align: left;
-  width: 100%;
-  display: table;
-  overflow-x: initial;
+	border-spacing: 0;
+	overflow-x: auto;
+	text-align: left;
+	width: 100%;
+	display: table;
+	overflow-x: initial;
+	td {
+		vertical-align: baseline;
+	}
 }
 
 td,
 th {
-  border-bottom: 0.1rem solid var(--text-color);
-  padding: 1.2rem 1.5rem;
-  &:first-child {
-    padding-left: 0;
-  }
+	border-bottom: 0.1rem solid var(--text-color);
+	padding: rem(10) 0.5rem;
+	&:first-child {
+		padding-left: 0;
+	}
 
-  &:last-child {
-    padding-right: 0;
-  }
+	&:last-child {
+		padding-right: 0;
+	}
 }
-
