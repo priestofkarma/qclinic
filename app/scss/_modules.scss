@@ -445,7 +445,8 @@ html:not(.touch) {
 			font: var(--h3mob-font);
 			margin-bottom: rem(28);
 		}
-		ul, ol {
+		ul,
+		ol {
 			margin: 0;
 			li:last-child {
 				margin-bottom: 0;
@@ -467,6 +468,69 @@ html:not(.touch) {
 			td:first-child {
 				font-weight: 600;
 			}
+		}
+	}
+}
+
+.cta-google {
+	padding: rem(50) 0;
+	&__wrapper {
+		padding: rem(60) 0;
+		background-color: var(--lightblue);
+	}
+	.title {
+		margin-top: rem(24);
+		margin-bottom: rem(33);
+	}
+}
+
+.guarantee {
+	padding: rem(50) 0;
+	&__title {
+		margin-bottom: rem(30);
+	}
+	hr {
+		margin: rem(30) 0;
+	}
+}
+
+.guarantee--second {
+	background-color: var(--grey);
+	padding-bottom: rem(30);
+	.guarantee__text {
+		& > *:not(hr) {
+			margin-bottom: rem(10);
+		}
+	}
+	hr {
+		margin: rem(10) 0;
+	}
+}
+
+.descript {
+	font: var(--disdcriptor);
+}
+
+.partner {
+	padding: rem(80) 0;
+	&__title {
+		margin-bottom: rem(40);
+	}
+	&__item {
+		border: var(--border-grey);
+		padding-bottom: 100%;
+		&:hover {
+			img {
+				transform: translate(-50%, -50%) scale(1.02);
+			}
+		}
+		img {
+			top: 50%;
+			left: 50%;
+			object-fit: contain;
+			max-width: 75%;
+			transform: translate(-50%, -50%);
+			transition: transform 0.15s ease;
 		}
 	}
 }

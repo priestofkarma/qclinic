@@ -1,9 +1,50 @@
 .reviews {
 	padding-top: rem(50);
 	padding-bottom: rem(50);
+	&-list:not(.reviews-slider) {
+		.reviews-item {
+			margin-bottom: rem(30);
+		}
+	}
 	&-item {
 		background-color: var(--grey);
 		padding: rem(40) rem(17) rem(40) rem(25);
+		&:nth-child(6n + 1),
+		&:nth-child(1) {
+			.userpic {
+				background-color: #9ab8c1;
+			}
+		}
+		&:nth-child(6n + 2),
+		&:nth-child(2) {
+			.userpic {
+				background-color: #ffa944;
+			}
+		}
+		&:nth-child(6n + 3),
+		&:nth-child(3) {
+			.userpic {
+				background-color: #82755d;
+			}
+		}
+		&:nth-child(6n + 4),
+		&:nth-child(4) {
+			.userpic {
+				background-color: #ebb96e;
+			}
+		}
+		&:nth-child(6n + 5),
+		&:nth-child(5) {
+			.userpic {
+				background-color: #eb6ed7;
+			}
+		}
+		&:nth-child(6n + 6),
+		&:nth-child(6) {
+			.userpic {
+				background-color: #c2175b;
+			}
+		}
 	}
 	&-item__text {
 		display: flex;
@@ -25,6 +66,12 @@
 			height: rem(60);
 			overflow: hidden;
 			margin-right: rem(25);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: rem(25);
+			color: #ffffff;
+			font-weight: 600;
 		}
 		.rating {
 			svg {

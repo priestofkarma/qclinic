@@ -57,9 +57,12 @@ h4,
 h5,
 .h5 {
 	font: var(--h5-font);
+	font-weight: 600;
 }
 
 h6,
 .h6 {
 	font: var(--h6-font);
+	font-weight: 600;
+	letter-spacing: -0.02em;
 }

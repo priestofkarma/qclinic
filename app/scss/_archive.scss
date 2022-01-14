@@ -1,0 +1,31 @@
+.archive {
+	&-item {
+		padding-top: rem(53);
+		hr {
+			margin: 0;
+		}
+		.date {
+			color: var(--text02-color);
+			font: var(--text02);
+		}
+		.title {
+			margin-top: rem(22);
+			margin-bottom: rem(19);
+			letter-spacing: 0.2px;
+		}
+		.text {
+			padding-bottom: rem(30);
+			& > *:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.d-link {
+			font-weight: 400;
+		}
+		.img-cover {
+			margin-top: rem(41);
+			padding-bottom: 77%;
+			margin-bottom: rem(55);
+		}
+	}
+}

@@ -95,6 +95,8 @@ $(document).ready(function () {
 	let ourTeamSlider = false;
 	let ourTeamSliderInit = false;
 
+	/* reviews grid */
+	let reviewsGrid = false;
 
 	/* which media query */
 	function swiperMode() {
@@ -160,6 +162,18 @@ $(document).ready(function () {
 		}
 
 		if (queryMD.matches) {
+
+			if ($(".reviews-list-grid").length > 0) {
+				$(".reviews-list-grid").isotope({
+					itemSelector: '.reviews-item',
+					percentPosition: true,
+					masonry: {
+						columnWidth: '.reviews-list-grid-sizer',
+						gutter: $(".reviews-list-grid-gutter").width() * 2,
+					},
+				});
+			}
+
 			/* benefits slider */
 			benefitsSliderInit = false;
 			if (benefitsSlider) {
