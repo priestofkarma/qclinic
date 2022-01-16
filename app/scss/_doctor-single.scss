@@ -1,0 +1,51 @@
+.doctor-card {
+	padding-bottom: rem(50);
+	&__image {
+		background-color: var(--grey);
+		.img-cover {
+			padding-bottom: 135%;
+			height: 100%;
+			img {
+				position: absolute;
+				object-fit: contain;
+				top: auto;
+				bottom: 0;
+				right: 0;
+				height: auto;
+			}
+		}
+	}
+	&__title {
+		font-size: rem(32);
+		margin-bottom: rem(37);
+	}
+	&__info {
+		height: 100%;
+		padding: rem(25);
+		padding-bottom: rem(12);
+		background-color: var(--lightblue);
+	}
+	&__education {
+		padding: rem(25);
+		padding-top: rem(12);
+		background-color: var(--lightblue);
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+		ul,
+		ol {
+			list-style: none;
+			margin: 0;
+			li > * {
+				margin-bottom: 0;
+			}
+			li:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.doctor-about {
+	padding: rem(50) 0;
+}

@@ -321,6 +321,7 @@
 		}
 	}
 
+	/* guarantee */
 	.guarantee {
 		padding-top: rem(100);
 		&:not(.guarantee--second) {
@@ -331,6 +332,36 @@
 		&__title {
 			margin-bottom: rem(40);
 		}
+	}
+
+	/* doctor-card */
+	.doctor-card {
+		&__wrapper,
+		&__wrapper > * {
+			--bs-gutter-y: 10px;
+			--bs-gutter-x: 10px;
+		}
+		&__info {
+			padding: rem(45) rem(20);
+			background-color: var(--lightblue);
+		}
+		&__education {
+			padding: rem(33) rem(20) rem(18);
+			background-color: var(--lightblue);
+		}
+	}
+
+	.education-list-sizer,
+	.education-list li {
+		width: 48%;
+	}
+	.education-list-gutter {
+		width: 10px;
+	}
+
+	.education-list li {
+		float: left;
+		margin-bottom: 1rem;
 	}
 }
 
@@ -525,11 +556,21 @@
 			}
 		}
 	}
+
+	.doctor-card {
+		&__title {
+			font-size: rem(41);
+		}
+	}
 }
 
 @media (min-width: 1200px) {
 	:root {
 		--header-height: 100px;
+	}
+
+	.breadcrumb-wrapper .breadcrumb {
+		font-size: 1rem;
 	}
 
 	.container,
@@ -547,7 +588,7 @@
 		}
 	}
 
-	.not-home {
+	.not-home:not(.fake-home) {
 		.header {
 			background-color: transparent;
 			color: #fff;
@@ -586,7 +627,7 @@
 	}
 
 	.page-scrolled {
-		&.not-home {
+		&.not-home:not(.fake-home) {
 			.header {
 				&__action {
 					color: var(--cyan);
@@ -660,6 +701,7 @@
 
 	/* services */
 	.services {
+		padding-top: rem(70);
 		&-list:not(.services-slider) {
 			margin-bottom: rem(-80);
 			.services__item-wrap {
@@ -697,6 +739,9 @@
 			}
 		}
 		&__item {
+			.services__description {
+				margin-top: 0;
+			}
 			&:before,
 			&:after {
 				content: "";
@@ -935,6 +980,64 @@
 		&__title {
 			font: var(--h2-font);
 			margin-bottom: rem(60);
+		}
+	}
+
+	.doctor-card {
+		&__education,
+		&__image {
+			height: 100%;
+		}
+		&__info {
+			margin-right: calc(var(--bs-gutter-x) * -0.35);
+			padding: rem(40);
+		}
+		&__education {
+			margin-left: calc(var(--bs-gutter-x) * -0.35);
+			padding: rem(40);
+			padding-left: rem(50);
+		}
+
+		&__wrapper,
+		&__wrapper > * {
+			--bs-gutter-y: 0;
+			--bs-gutter-x: 30px;
+		}
+		&__image,
+		&__info,
+		&__wrapper {
+			animation-name: heroFadeUp;
+			animation-duration: 0.7s;
+			animation-timing-function: ease;
+			animation-fill-mode: both;
+		}
+		&__info {
+			animation-delay: 0.2s;
+		}
+		&__wrapper {
+			animation-delay: 0.3s;
+		}
+	}
+
+	.education-list-sizer,
+	.education-list li {
+		width: 100%;
+	}
+
+	.education-list-gutter {
+		display: none;
+	}
+
+	.education-list li {
+		float: initial;
+		margin-bottom: 1rem;
+	}
+
+	.doctor-about {
+		font-size: 1rem;
+		.title {
+			font-size: rem(41);
+			margin-bottom: rem(20);
 		}
 	}
 }

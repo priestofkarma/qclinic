@@ -108,6 +108,7 @@ $(document).ready(function () {
 		let queryXXL = window.matchMedia('(min-width: 1400px)');
 
 		if (queryXS.matches) {
+
 			if ($(".benefits-slider").length > 0) {
 				if (!benefitsSliderInit) {
 					benefitsSliderInit = true;
@@ -149,12 +150,6 @@ $(document).ready(function () {
 				});
 			}
 
-			/* our team slider */
-			/* ourTeamSliderInit = false;
-			if (ourTeamSlider) {
-				ourTeamSlider.destroy();
-			} */
-
 		}
 
 		if (queryS.matches) {
@@ -179,9 +174,25 @@ $(document).ready(function () {
 			if (benefitsSlider) {
 				benefitsSlider.destroy();
 			}
+
+
+			if ($(".education-list").length > 0) {
+				$(".education-list").isotope({
+					itemSelector: '.education-list li',
+					percentPosition: true,
+					masonry: {
+						columnWidth: '.education-list-sizer',
+						gutter: $(".education-list-gutter").width() * 2,
+					},
+				});
+			}
+
 		}
 
+		if (queryLG.matches) { }
+
 		if (queryXL.matches) {
+			$(".education-list").isotope("destroy");
 		}
 	}
 

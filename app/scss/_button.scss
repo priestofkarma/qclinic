@@ -50,7 +50,7 @@ button {
 
 .button--outline {
 	color: var(--cyan);
-	background-color: #fff;
+	background-color: transparent;
 	&:hover,
 	&:focus {
 		color: #fff;

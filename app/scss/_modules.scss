@@ -38,6 +38,10 @@ input.wpcf7-not-valid {
 	background-color: #fff;
 }
 
+.w-100 {
+	width: 100% !important;
+}
+
 .wrapper {
 	position: relative;
 	width: 100%;
@@ -88,7 +92,18 @@ input.wpcf7-not-valid {
 }
 
 /* home not-home */
-.home {
+.not-home:not(.fake-home) {
+	.header {
+		&__logo {
+			svg {
+				fill: var(--cyan);
+			}
+		}
+	}
+}
+
+.home,
+.fake-home {
 	padding-top: var(--header-height);
 	.header {
 		background-color: #fff;
@@ -100,18 +115,8 @@ input.wpcf7-not-valid {
 	}
 }
 
-.not-home {
-	.header {
-		&__logo {
-			svg {
-				fill: var(--cyan);
-			}
-		}
-	}
-}
-
 .page-scrolled {
-	&.not-home {
+	&.not-home:not(.fake-home) {
 		.header {
 			background-color: #fff;
 			&__nav {
