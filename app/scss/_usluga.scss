@@ -35,6 +35,7 @@
 				margin: 0;
 			}
 			svg {
+				margin-top: 3px;
 				flex-shrink: 0;
 				margin-right: rem(15);
 				fill: var(--cyan);
@@ -44,7 +45,6 @@
 }
 
 .usluga-case {
-	padding: rem(50) 0;
 	.title {
 		margin-bottom: rem(45);
 	}
@@ -75,5 +75,14 @@
 			font-size: 1rem;
 			font-weight: 600;
 		}
+	}
+}
+
+.usluga-caption {
+	&__title {
+		margin-bottom: rem(45);
+	}
+	img {
+		margin: rem(30) 0;
 	}
 }

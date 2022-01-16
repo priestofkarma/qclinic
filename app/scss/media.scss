@@ -53,6 +53,7 @@
 @media (min-width: 768px) {
 	:root {
 		--header-height: 75px;
+		--section-padding: 3.75rem;
 	}
 
 	.default-slider-head {
@@ -98,7 +99,6 @@
 
 	/* benefits */
 	.benefits {
-		padding-top: rem(60);
 		&-slider {
 			.swiper-wrapper {
 				flex-wrap: wrap;
@@ -114,16 +114,6 @@
 		}
 	}
 
-	/* our-team */
-	.our-team {
-		padding-bottom: rem(70);
-	}
-
-	/* reviews */
-	.reviews {
-		padding-top: rem(70);
-	}
-
 	/* services */
 	.services {
 		&-list:not(.services-slider) {
@@ -136,7 +126,7 @@
 
 	/* cta */
 	.cta {
-		padding-top: rem(120);
+		padding-top: rem(160) !important;
 		margin-top: rem(80);
 		&-slider {
 			.cta-pagination {
@@ -201,7 +191,6 @@
 
 	/* gallery */
 	.gallery {
-		padding-top: rem(65);
 		.cta-circle {
 			width: rem(144);
 			right: 1%;
@@ -240,9 +229,11 @@
 
 	/* before-after */
 	.before-after {
-		padding-bottom: rem(80);
 		&__text {
 			font-size: 16px;
+		}
+		&__item {
+			margin-bottom: 0;
 		}
 	}
 
@@ -274,7 +265,6 @@
 
 	/* cta-google */
 	.cta-google {
-		padding: rem(70) 0;
 		&__wrapper {
 			position: relative;
 			padding: rem(80) 0;
@@ -374,16 +364,12 @@
 		height: 100%;
 	}
 	.mobile-nav {
-		// width: rem(370);
 		right: calc((100% - 960px) / 2);
 		transform: translateX(calc(100% + (960px / 2)));
 	}
 
 	.default-slider-head {
 		margin-bottom: rem(67);
-		/* .title {
-			width: 45%;
-		} */
 	}
 
 	/* hero */
@@ -447,8 +433,6 @@
 
 	/* our-team */
 	.our-team {
-		padding-top: rem(90);
-
 		&__item {
 			margin-bottom: rem(30);
 			.title {
@@ -593,6 +577,7 @@
 @media (min-width: 1200px) {
 	:root {
 		--header-height: 100px;
+		--section-padding: 4.6875rem;
 	}
 
 	.breadcrumb-wrapper .breadcrumb {
@@ -715,9 +700,7 @@
 
 	/* benefits */
 	.benefits {
-		padding-top: rem(100);
-		padding-top: rem(60);
-
+		padding-top: calc(var(--section-padding) * 1.4);
 		&__item {
 			.title {
 				font: var(--h3-font);
@@ -727,7 +710,6 @@
 
 	/* services */
 	.services {
-		padding-top: rem(70);
 		&-list:not(.services-slider) {
 			margin-bottom: rem(-80);
 			.services__item-wrap {
@@ -1073,6 +1055,34 @@
 	}
 	.usluga-case__item .title {
 		font: var(--h3-font);
+	}
+
+	.usluga-caption {
+		font-size: 1rem;
+		padding: rem(80) 0;
+		&__title {
+			font: var(--h2-font);
+			margin-bottom: rem(60);
+		}
+		img {
+			margin: rem(40) 0;
+		}
+	}
+	.contacts {
+		
+		&__right {
+			font-size: 1rem;
+		}
+		.tel-number {
+			font: var(--h2-font);
+		}
+
+		&__right {
+			&-title {
+				font: var(--h2-font);
+				margin-bottom: rem(45);
+			}
+		}
 	}
 }
 

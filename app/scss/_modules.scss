@@ -29,6 +29,7 @@ input.wpcf7-not-valid {
 		scroll-behavior: initial;
 	}
 }
+
 .page-container {
 	position: relative;
 	width: 100%;
@@ -36,6 +37,10 @@ input.wpcf7-not-valid {
 	margin: 0 auto;
 	// overflow: hidden;
 	background-color: #fff;
+}
+
+section {
+	padding: var(--section-padding) 0;
 }
 
 .w-100 {

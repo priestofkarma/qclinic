@@ -1,0 +1,143 @@
+@@include('./header.part.html', {
+'class': 'not-home',
+'title': 'Контакты',
+})
+
+<section class="intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 d-flex flex-column justify-content-end">
+				<h1 class="intro__title">Контакты</h1>
+				<div class="d-flex breadcrumb-wrapper" aria-label="breadcrumb">
+					<ul class="breadcrumb">
+						<li><a href="/">Главная</a></li>
+						<li>/</li>
+						<li>Контакты</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="img-cover intro__image"><img src="images/contacts-intro.jpg" alt="contacts-intro.jpg"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="contacts">
+	<div class="container">
+		<div class="row contacts__wrapper">
+			<div class="col-md-6 col-xl-5">
+				<div class="contacts__left d-flex flex-column align-items-start">
+					<a href="tel:+380443603030" class="h3 tel-number">+380443603030</a>
+					<a href="#" class="d-link mb-3 mb-md-5 mb-xl-4">Заказать звонок</a>
+					<a href="mailto:info@qclinic.com">info@qclinic.com</a>
+				</div>
+			</div>
+			<div class="col-md-6 mt-4 mt-md-0 offset-xl-1">
+				<hr class="mt-xl-0">
+				<div class="contacts__right d-flex my-xl-4 flex-column flex-xl-row justify-content-between">
+					<div class="contacts__shedule d-flex flex-column">
+						<p style="color: var(--cyan); margin-bottom: 1rem;">Понедельник - суббота</p>
+						<p class="m-0">9:00 до 21:00, <br> Воскресенье - выходной</p>
+					</div>
+					<div class="contacts__address d-flex flex-column">
+						<span class="h3 mt-4 mt-xl-0 address">г. Киев, ул. Жилянская, 30А</span>
+						<div class="mt-auto">
+							<a href="#" target="_blank" class="d-link me-3">Смотреть на карте</a>
+							<a href="#" target="_blank" class="d-link">Как добраться?</a>
+						</div>
+					</div>
+				</div>
+				<hr>
+			</div>
+		</div>
+		<div class="row contacts__wrapper mt-4">
+			<div class="col-md-6 col-xl-5 mt-xl-4">
+				<div class="row contacts__left mb-5 contacts__messanger">
+					<div class="col-6 col-sm-3 col-md-6 col-lg-4">
+						<a href="#" class="contacts__messanger-item">
+							<div>
+								<div class="messanger-icon" style="background-image: url('images/icon-telegram.svg');"></div>
+								<span class="messanger-text">Написать <br> в Telegram</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-6 col-sm-3 col-md-6 col-lg-4">
+						<a href="#" class="contacts__messanger-item">
+							<div>
+								<div class="messanger-icon" style="background-image: url('images/icon-viber.svg');"></div>
+								<span class="messanger-text">Написать <br> в Viber</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-6 col-sm-3 col-md-6 col-lg-4">
+						<a href="#" class="contacts__messanger-item">
+							<div>
+								<div class="messanger-icon" style="background-image: url('images/icon-whatsapp.svg');"></div>
+								<span class="messanger-text">Написать <br> в Whats App</span>
+							</div>
+						</a>
+					</div>
+					<div class="col-6 col-sm-3 col-md-6 col-lg-4">
+						<div class="col-12 contacts__messanger-item footer__social">
+							<ul class="m-0 d-flex align-items-center justify-content-center justify-content-lg-start">
+								<li>
+									<a href="#facebook" class="d-inline-block me-3" aria-label="Фейсбук страница компании">
+										<svg>
+											<use href="images/sprite.svg#facebook"></use>
+										</svg>
+									</a>
+								</li>
+								<li>
+									<a href="#instagram" class="d-inline-block" aria-label="Инстаграм компании">
+										<svg>
+											<use href="images/sprite.svg#instagram"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="contacts__right col-md-6 offset-xl-1">
+				<h2 class="h3 contacts__right-title">Оставить заявку</h2>
+				<div class="register-form">
+					<form action="gg.php">
+						<div class="col-md-12">
+							<input type="text" name="name" placeholder="ФИО">
+						</div>
+						<div class="col-md-12">
+							<input type="tel" name="telephone" placeholder="Номер телефона">
+						</div>
+						<div class="col-md-12">
+							<input type="email" name="email" placeholder="E-mail">
+						</div>
+						<div>
+							<textarea placeholder="Комментарий" name="message" cols="1" rows="1"></textarea>
+						</div>
+						<div>
+							<span class="wpcf7-form-control-wrap">
+								<span class="wpcf7-form-control wpcf7-acceptance">
+									<span class="wpcf7-list-item">
+										<label><input type="checkbox" value="1" aria-invalid="false" checked="checked">
+											<span class="wpcf7-list-item-label">Принимаю условия <a href="#" target="_blank">политики конфиденциальности</a></span>
+										</label>
+									</span>
+								</span>
+							</span>
+						</div>
+						<button type="submit" class="button">
+							<svg class="button__icon">
+								<use href="images/sprite.svg#mini-logo"></use>
+							</svg>Отправить заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include('./footer.part.html')
