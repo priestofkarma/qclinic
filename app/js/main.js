@@ -343,5 +343,56 @@ $(document).ready(function () {
 		return false;
 	}
 
+	/* filter */
+	if ($(window).width() < 767) {
+		$(".q-filter-item-fake").click(function () {
+			if (!$(".q-filter-list").hasClass("opened")) {
+				$(".q-filter-list").addClass("opened");
+				/* $(".q-filter-list").animate({
+					height: "100%"
+				});*/
+			}
+		});
+	}
+
+
+	$(".q-filter-list__item").click(function (event) {
+		event.preventDefault();
+
+		let category = $(this).data("filter");
+
+		/* success DELETE THIS*/
+		$(".q-filter-list__item").removeClass("filter-active");
+		$(this).addClass("filter-active");
+		console.log(category);
+		if ($(window).width() < 767) {
+			$(".q-filter-list").removeClass("opened");
+		}
+		/* success DELETE THIS */
+
+		/* ajax queue
+			1. https://www.youtube.com/watch?v=lz-daH9ZajU
+			2. https://www.youtube.com/watch?v=6xst0NpkQDg
+			3. https://www.youtube.com/watch?v=KRc47o8uDhk&t
+		*/
+
+		/* $.ajax({
+			url: wpAjax.ajaxUrl,
+			data: { action: "filter", category: category },
+			success: function (result) {
+				console.log(result);
+				$(".q-filter-list__item").removeClass("filter-active");
+				$(this).addClass("filter-active");
+
+				if ($(window).width() < 767) {
+					$(".q-filter-list").removeClass("opened");
+				}
+			},
+			error: function (result) {
+				console.warn(result);
+			}
+		}); */
+	})
+
 });
 

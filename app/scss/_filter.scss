@@ -1,0 +1,66 @@
+.q-filter {
+	&-list {
+		overflow: hidden;
+		border: var(--border-cyan);
+		height: 3.8rem;
+		position: relative;
+		z-index: 1;
+		&.opened {
+			height: 100%;
+			.q-filter-item-fake {
+				display: none;
+			}
+			&:after {
+				content: "";
+				display: block;
+				height: 3.8rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background-color: var(--lightblue);
+				z-index: -1;
+			}
+		}
+		.q-filter-item-fake {
+			display: block;
+			height: 3.8rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1;
+		}
+	}
+	&-list__item {
+		width: 100%;
+		justify-content: flex-start;
+		padding: 0 rem(17);
+		border: none;
+		background-color: transparent;
+		&:hover {
+			background-color: var(--lightblue);
+			color: var(--cyan);
+		}
+		&.filter-active {
+			position: relative;
+			order: -1;
+			&:after {
+				content: "";
+				width: 15px;
+				height: 15px;
+				position: absolute;
+				background-image: url("../images/chevron-down-cyan.svg");
+				background-size: 15px;
+				background-position: center;
+				background-repeat: no-repeat;
+				right: rem(27);
+				top: 50%;
+				transform: translate(0, -50%);
+			}
+		}
+	}
+	&-list__item + &-list__item {
+		margin-top: -1px;
+	}
+}
