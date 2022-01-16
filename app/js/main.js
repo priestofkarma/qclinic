@@ -292,7 +292,7 @@ $(document).ready(function () {
 			});
 		});
 
-		let beforeAfter = document.querySelectorAll(".before-after .img-cover");
+		let beforeAfter = document.querySelectorAll(".before-after__item .img-cover");
 		beforeAfter.forEach(image => {
 			image.addEventListener("mousemove", function (e) {
 				zoom(e);

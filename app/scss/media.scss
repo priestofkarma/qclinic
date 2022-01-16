@@ -363,6 +363,10 @@
 		float: left;
 		margin-bottom: 1rem;
 	}
+
+	.usluga-case {
+		padding: rem(80) 0;
+	}
 }
 
 @media (min-width: 992px) {
@@ -377,9 +381,9 @@
 
 	.default-slider-head {
 		margin-bottom: rem(67);
-		.title {
+		/* .title {
 			width: 45%;
-		}
+		} */
 	}
 
 	/* hero */
@@ -560,6 +564,28 @@
 	.doctor-card {
 		&__title {
 			font-size: rem(41);
+		}
+	}
+
+	/* usluga */
+	.usluga-pluses {
+		.title {
+			max-width: 52%;
+			font: var(--h2-font);
+		}
+		&__image {
+			padding-top: rem(62);
+			.img-cover {
+				width: rem(253);
+				height: rem(253);
+			}
+			.cta-circle {
+				left: rem(185);
+				width: rem(130);
+			}
+		}
+		&__list {
+			font-size: 1rem;
 		}
 	}
 }
@@ -1039,6 +1065,14 @@
 			font-size: rem(41);
 			margin-bottom: rem(20);
 		}
+	}
+
+	.usluga-case__title {
+		font: var(--h2-font);
+		margin-bottom: rem(70);
+	}
+	.usluga-case__item .title {
+		font: var(--h3-font);
 	}
 }
 

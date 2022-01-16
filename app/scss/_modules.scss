@@ -390,25 +390,28 @@ input.wpcf7-not-valid {
 
 .before-after {
 	padding: rem(60) 0;
+	&__title {
+		margin-bottom: 0;
+	}
 	&__text {
 		font-weight: 600;
 		font-size: 14px;
 	}
 	&__item {
 		margin-bottom: rem(46);
-	}
-	.img-cover {
-		padding-bottom: 64%;
-		margin-bottom: rem(10);
-		background-position: 50% 50%;
-		img {
-			transition: opacity 0.15s ease-in-out;
+		.img-cover {
+			padding-bottom: 64%;
+			margin-bottom: rem(10);
+			background-position: 50% 50%;
+			img {
+				transition: opacity 0.15s ease-in-out;
+			}
 		}
 	}
 }
 
 html:not(.touch) {
-	.before-after {
+	.before-after__item {
 		.img-cover {
 			cursor: zoom-in;
 			background-position: 50% 50%;
